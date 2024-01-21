@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'FONT_NAME_HERE-EXAMPLE-BOLD';
+  font-weight: FONT_WEIGHT_HERE;
+  font-display: DISPLAY_BEHAVIOR;
+  src:
+    local('LOCAL_FONT_NAME_HERE'),
+    url('PATH_TO_FONT_FILE_HERE') format('FONT_FORMAT_HERE');
+  /* ... other fonts ... */
+}
+
+:root {
+  --font-example-bold: 'FONT_NAME_HERE-EXAMPLE-BOLD', 'Arial', sans-serif;
+  --font-example-regular: 'font regular', 'Arial', sans-serif;
+  /* ... other font variables ... */
+}

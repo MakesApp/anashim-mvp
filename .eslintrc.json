@@ -1,0 +1,62 @@
+{
+  "ignorePatterns": ["jest.config.js", "dist/**"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/typescript",
+    "eslint-config-prettier",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:security/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "react-hooks",
+    "jsx-a11y",
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "valid-typeof": "error",
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0,
+    "react/jsx-key": "off",
+    "camelcase": "error",
+    "react/function-component-definition": "off",
+    "linebreak-style": ["error", "unix"],
+    "react/display-name": "off",
+    "no-process-env": "off",
+    "require-await": "error",
+    "security/detect-object-injection": "off",
+    "security/detect-non-literal-regex": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
