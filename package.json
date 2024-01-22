@@ -1,17 +1,5 @@
 {
-  "lint-staged": {
-    "*.+(js|jsx|ts|tsx)": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*styles.ts": [
-      "npm run lint:css"
-    ],
-    "*.+(json|md)": [
-      "prettier --write"
-    ]
-  },
-  "name": "react-boiler-plate",
+  "name": "anashim-mvp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,12 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint --ext .ts,.tsx,.js --ignore-path .eslintignore --report-unused-disable-directives --max-warnings 0 .",
-    "lint:css": "stylelint './src/**/*styles.ts'",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|css)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
-    "validate": "npm-run-all --parallel check-format lint ",
-    "lint-staged": "lint-staged",
+    "validate": "npm-run-all --parallel check-format lint",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch"

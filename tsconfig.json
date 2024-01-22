@@ -30,14 +30,14 @@
       "@assets/*": ["src/assets/*"],
       "@types/*": ["src/types/*"],
       "@api/*": ["src/api/*"],
-      "@test/*": ["src/test/*"]
+      "@test/*": ["src/test/*"],
       // ... add more aliases as needed. Dont forget to add it to the vite.config as well
-    }
+    },
   },
   "include": ["src"],
   "references": [
     {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+      "path": "./tsconfig.node.json",
+    },
+  ],
 }
