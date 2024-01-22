@@ -1,0 +1,26 @@
+.container {
+  border-radius: 4px;
+  background-color: #fff;
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  width: fit-content;
+  border: 1px solid #dfdfdf;
+}
+
+.logo {
+  max-height: 10rem;
+}
+
+.companyName {
+  margin-top: 1rem;
+  font-size: 20px;
+  font-family: var(--primary-font-bold);
+  line-height: 0.7;
+}
+
+.lastAdded {
+  font-size: 1.2rem;
+  font-family: var(--primary-font-regular);
+  letter-spacing: 0.066px;
+  color: var(--rose-pink);
+}

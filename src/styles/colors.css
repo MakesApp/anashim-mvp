@@ -1,4 +1,8 @@
 :root {
-  --color-my-example: #ffff;
+  --bg-color: #f2f2f2;
+  --cotton-candy-pink: #f9e1e7;
+  --blush-rose: #cc4b65;
+  --rose-pink: #d8788b;
+
   /* ... other color variables ... */
 }

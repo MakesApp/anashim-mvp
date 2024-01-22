@@ -1,0 +1,6 @@
+.footer {
+  padding: 0 17.5% 4% 17.5%;
+  mix-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+}

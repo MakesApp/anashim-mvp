@@ -9,3 +9,6 @@ const getEnvVariable = (varName: keyof ImportMetaEnv): string => {
 export const getBaseUrl = (): string => {
   return getEnvVariable('VITE_REACT_APP_BASE_URL');
 };
+export const getEnvironmentName = (): string => {
+  return getEnvVariable('VITE_REACT_APP_ENVIRONMENT_NAME');
+};

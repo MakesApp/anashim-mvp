@@ -9,7 +9,8 @@
 }
 
 :root {
-  --font-example-bold: 'FONT_NAME_HERE-EXAMPLE-BOLD', 'Arial', sans-serif;
-  --font-example-regular: 'font regular', 'Arial', sans-serif;
-  /* ... other font variables ... */
+  --primary-font-bold: 'Pauza Bold', sans-serif;
+  --primary-font-regular: 'Pauza Regular', sans-serif;
+  --primary-font-thin: 'Pauza Thin', sans-serif;
+  --primary-font-medium: 'Pauza Medium', sans-serif;
 }

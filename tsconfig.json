@@ -27,6 +27,7 @@
       "@context/*": ["src/context/*"],
       "@hooks/*": ["src/hooks/*"],
       "@utils/*": ["src/utils/*"],
+      "@layouts/*": ["src/layouts/*"],
       "@assets/*": ["src/assets/*"],
       "@types/*": ["src/types/*"],
       "@api/*": ["src/api/*"],

@@ -1,0 +1,9 @@
+.home {
+  flex: 1;
+}
+.heroImg {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
