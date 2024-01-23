@@ -3,6 +3,10 @@ import publicIcon from '@assets/icons/public.svg';
 import employment from '@assets/icons/employment.svg';
 import education from '@assets/icons/education.svg';
 import project from '@assets/icons/project.svg';
+import business from '@assets/icons/business.svg';
+import social from '@assets/icons/social.svg';
+import program from '@assets/icons/program.svg';
+import platform from '@assets/icons/platform.svg';
 
 export const tagsObj = {
   ציבורי: {
@@ -15,13 +19,13 @@ export const tagsObj = {
     group: 'sector',
     name: 'social',
     bgColor: 'var(--coral-blush)',
-    icon: 'publicIcon',
+    icon: social,
   },
   עסקי: {
     group: 'sector',
     name: 'business',
     bgColor: 'var(--coral-blush)',
-    icon: 'social',
+    icon: business,
   },
   למידה: {
     group: 'field',
@@ -42,6 +46,11 @@ export const tagsObj = {
     icon: employment,
   },
   מיזם: { group: 'type', name: 'project', bgColor: 'var(--plum-wine)', icon: project },
-  תוכנית: { group: 'type', name: 'program', bgColor: 'var(--plum-wine)', icon: '' },
-  פלטפורמה: { group: 'type', name: 'platform', bgColor: 'var(--plum-wine)', icon: '' },
+  תוכנית: { group: 'type', name: 'program', bgColor: 'var(--plum-wine)', icon: program },
+  פלטפורמה: {
+    group: 'type',
+    name: 'platform',
+    bgColor: 'var(--plum-wine)',
+    icon: platform,
+  },
 };
