@@ -3,23 +3,6 @@ import publicIcon from '@assets/icons/public.svg';
 import employment from '@assets/icons/employment.svg';
 import education from '@assets/icons/education.svg';
 import project from '@assets/icons/project.svg';
-export const types = {
-  מיזם: 'project',
-  תוכנית: 'program',
-  פלטפורמה: 'platform',
-};
-
-export const fields = {
-  למידה: 'learning',
-  חינוך: 'education',
-  תעסוקה: 'employment',
-};
-
-export const sectors = {
-  ציבורי: 'public',
-  חברתי: 'social',
-  עסקי: 'business',
-};
 
 export const tagsObj = {
   ציבורי: {

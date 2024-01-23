@@ -2,16 +2,19 @@ import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.css';
 import Ribbon from './components/Ribbon/Ribbon';
 import React from 'react';
-import { IProductCardProps } from './ProductCard.types';
 import TagList from './components/TagList/TagList';
 import Quote from './components/Quote/Quote';
-const ProductCard: React.FC<IProductCardProps> = ({
+import { Product } from 'src/localTypes/product.types';
+const ProductCard: React.FC<Product> = ({
   logo,
-  tags,
+  type,
+  sector,
+  fields,
   name,
-  quote,
-  lastAdded,
+  shortDescription,
 }) => {
+  const lastAdded = true;
+  const tags = [...fields, type, sector];
   return (
     <Link className={styles.link} to={{ pathname: '/' }}>
       <Ribbon />
@@ -22,7 +25,7 @@ const ProductCard: React.FC<IProductCardProps> = ({
           {lastAdded && <span className={styles.lastAdded}>נוספו לאחרונה</span>}
         </div>
         <TagList tags={tags} />
-        <Quote text={quote} />
+        <Quote text={shortDescription} />
         <div className={styles.infoBox}>להציג מידע</div>
       </div>
     </Link>

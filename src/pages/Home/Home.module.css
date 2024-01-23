@@ -1,6 +1,7 @@
 .home {
   flex: 1;
   position: relative;
+  padding-bottom: 9%;
 }
 .heroImg {
   width: 100%;
@@ -15,8 +16,16 @@
 }
 
 .listContainer {
-  margin-top: -2.5%;
+  margin-top: -5%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.articleSectionTitle {
+  font-size: 3.6rem;
+  font-family: var(--primary-font-medium);
+  color: var(--blush-rose);
+  text-align: center;
+  margin: 3% 0;
 }
