@@ -14,11 +14,10 @@
 
 .logo {
   max-height: 10rem;
-  width: 100%;
 }
 
 .companyName {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 20px;
   font-family: var(--primary-font-bold);
   line-height: 0.7;

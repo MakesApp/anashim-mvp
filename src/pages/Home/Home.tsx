@@ -14,6 +14,7 @@ const Home = () => {
         <div className={styles.listContainer}>
           <ProductsList />
         </div>
+        <h2 className={styles.articleSectionTitle}>חדשות חמות מהתעשייה</h2>
       </main>
     </div>
   );
