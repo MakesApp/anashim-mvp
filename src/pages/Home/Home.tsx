@@ -1,29 +1,20 @@
-// import styles from './Home.module.css';
-// import hero from '@assets/images/hero.svg';
-import ag from '@assets/icons/ag.svg';
+import styles from './Home.module.css';
+import hero from '@assets/images/hero.jpg';
 
-// import HeroSection from './components/HeroSection/HeroSection';
-import ProductCard from '@components/ProductCard/ProductCard';
+import HeroSection from './components/HeroSection/HeroSection';
+import ProductsList from './components/ProductsList/ProductsList';
 const Home = () => {
   return (
-    <div style={{ display: 'flex', margin: '2rem' }}>
-      {/* <img className={styles.heroImg} loading="lazy" src={hero} alt="hero" />
+    <div>
       <main className={styles.home}>
-        <HeroSection />
-      </main> */}
-      <ProductCard
-        logo={ag}
-        name="Anashim IL"
-        lastAdded={true}
-        quote="רשות החדשנות מקדמת את החדשנות בתעשייה הישראלית, בדגש על תעשיית ההייטק , ולרבות תעשיית היצור."
-        tags={['מיזם', 'חינוך', 'למידה', 'תעסוקה', 'ציבורי']}
-      />
-      <ProductCard
-        logo={ag}
-        name="Anashim IL"
-        quote="רשות החדשנות מקדמת את החדשנות בתעשייה הישראלית, בדגש על תעשיית ההייטק , ולרבות תעשיית היצור."
-        tags={['מיזם']}
-      />
+        <div className={styles.heroSectionContainer}>
+          <img className={styles.heroImg} loading="lazy" src={hero} alt="hero" />
+          <HeroSection />
+        </div>
+        <div className={styles.listContainer}>
+          <ProductsList />
+        </div>
+      </main>
     </div>
   );
 };
