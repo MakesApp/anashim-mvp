@@ -1,5 +1,5 @@
-import { iconsByName } from './constants';
+import { tagsObj } from './constants';
 
-export default (names: (keyof typeof iconsByName)[]) => {
-  return names.map((name) => iconsByName[name]);
+export default (names: (keyof typeof tagsObj)[]) => {
+  return names.map((name) => ({ ...tagsObj[name], text: name }));
 };

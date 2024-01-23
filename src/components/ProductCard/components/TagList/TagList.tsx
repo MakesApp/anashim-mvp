@@ -1,18 +1,35 @@
 import Tag from '@components/Tag/Tag';
 import styles from './TagList.module.css';
 import getTagsIconByName from '@utils/getTagsIconByName';
-import { iconsByName } from '@utils/constants';
-const TagList: React.FC<{ tags: (keyof typeof iconsByName)[] }> = ({ tags }) => {
+import { tagsObj } from '@utils/constants';
+
+const TagList: React.FC<{ tags: (keyof typeof tagsObj)[] }> = ({ tags }) => {
   const tagsWithAdditionalData = getTagsIconByName(tags);
 
+  // Separate tags into two arrays based on their "group" property
+  const typeAndSectorTags = tagsWithAdditionalData.filter(
+    (tag) => tag.group === 'type' || tag.group === 'sector',
+  );
+
+  const fieldTags = tagsWithAdditionalData.filter((tag) => tag.group === 'field');
+
   return (
-    <ul className={styles.list}>
-      {tagsWithAdditionalData.map((tag) => (
-        <li key={tag.name}>
-          <Tag {...tag} icon={''} />
-        </li>
-      ))}
-    </ul>
+    <div className={styles.container}>
+      <ul className={styles.list}>
+        {typeAndSectorTags.map((tag) => (
+          <li key={tag.name}>
+            <Tag icon={tag.icon} name={tag.text} bgColor={tag.bgColor} />
+          </li>
+        ))}
+      </ul>
+      <ul className={styles.list}>
+        {fieldTags.map((tag) => (
+          <li key={tag.name}>
+            <Tag icon={tag.icon} name={tag.text} bgColor={tag.bgColor} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

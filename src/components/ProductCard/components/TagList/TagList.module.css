@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.container {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}

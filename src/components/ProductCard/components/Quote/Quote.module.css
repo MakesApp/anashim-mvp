@@ -1,0 +1,21 @@
+.container {
+  border-radius: 4px;
+  background-color: var(--pearl-white);
+  padding: 1.5rem;
+  position: relative;
+  height: 11.2rem;
+  margin: 2rem 0;
+  max-width: 300px;
+}
+
+.quoteIcon {
+  position: absolute;
+}
+
+.text {
+  padding-right: 3rem;
+  display: block;
+  line-height: 16px;
+  font-family: var(--primary-font-regular);
+  font-size: 1.4rem;
+}
