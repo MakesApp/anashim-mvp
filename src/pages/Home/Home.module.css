@@ -1,18 +1,6 @@
 .home {
   flex: 1;
-  position: relative;
   padding-bottom: 9%;
-}
-.heroImg {
-  width: 100%;
-  height: 514px;
-}
-
-.heroSectionContainer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .listContainer {

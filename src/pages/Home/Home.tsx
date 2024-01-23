@@ -7,10 +7,7 @@ const Home = () => {
   return (
     <div>
       <main className={styles.home}>
-        <div className={styles.heroSectionContainer}>
-          <img className={styles.heroImg} loading="lazy" src={hero} alt="hero" />
-          <HeroSection />
-        </div>
+        <HeroSection />
         <div className={styles.listContainer}>
           <ProductsList />
         </div>
