@@ -1,5 +1,4 @@
 import styles from './Home.module.css';
-import hero from '@assets/images/hero.jpg';
 
 import HeroSection from './components/HeroSection/HeroSection';
 import ProductsList from './components/ProductsList/ProductsList';
