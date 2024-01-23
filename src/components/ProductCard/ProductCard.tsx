@@ -17,10 +17,13 @@ const ProductCard: React.FC<IProductCardProps> = ({
       <Ribbon />
       <div className={styles.container}>
         <img className={styles.logo} src={logo} alt={logo + ' logo'} />
-        <h3 className={styles.companyName}>{name}</h3>
-        {lastAdded && <span className={styles.lastAdded}>{name}</span>}
+        <div className={styles.textContainer}>
+          <h3 className={styles.companyName}>{name}</h3>
+          {lastAdded && <span className={styles.lastAdded}>נוספו לאחרונה</span>}
+        </div>
         <TagList tags={tags} />
         <Quote text={quote} />
+        <div className={styles.infoBox}>להציג מידע</div>
       </div>
     </Link>
   );

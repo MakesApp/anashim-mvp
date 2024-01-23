@@ -5,6 +5,7 @@
   color: var(--blush-rose);
   display: flex;
   top: -2.5%;
+  right: 2.5%;
   column-gap: 0.8rem;
   padding: 0.3rem 1rem;
   align-items: center;

@@ -5,5 +5,5 @@ export interface IProductCardProps {
   tags: (keyof typeof tagsObj)[];
   name: string;
   quote: string;
-  lastAdded: boolean;
+  lastAdded?: boolean;
 }

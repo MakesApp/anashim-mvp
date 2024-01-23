@@ -6,7 +6,7 @@ import ag from '@assets/icons/ag.svg';
 import ProductCard from '@components/ProductCard/ProductCard';
 const Home = () => {
   return (
-    <div style={{ margin: '2rem' }}>
+    <div style={{ display: 'flex', margin: '2rem' }}>
       {/* <img className={styles.heroImg} loading="lazy" src={hero} alt="hero" />
       <main className={styles.home}>
         <HeroSection />
@@ -17,6 +17,12 @@ const Home = () => {
         lastAdded={true}
         quote="רשות החדשנות מקדמת את החדשנות בתעשייה הישראלית, בדגש על תעשיית ההייטק , ולרבות תעשיית היצור."
         tags={['מיזם', 'חינוך', 'למידה', 'תעסוקה', 'ציבורי']}
+      />
+      <ProductCard
+        logo={ag}
+        name="Anashim IL"
+        quote="רשות החדשנות מקדמת את החדשנות בתעשייה הישראלית, בדגש על תעשיית ההייטק , ולרבות תעשיית היצור."
+        tags={['מיזם']}
       />
     </div>
   );

@@ -2,9 +2,12 @@
   position: relative;
 }
 .container {
+  height: 100%;
   border-radius: 4px;
   background-color: #fff;
   padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
   width: fit-content;
   border: 1px solid #dfdfdf;
 }
@@ -21,9 +24,23 @@
   line-height: 0.7;
 }
 
+.textContainer {
+  flex: 1;
+}
 .lastAdded {
   font-size: 1.2rem;
   font-family: var(--primary-font-regular);
   letter-spacing: 0.066px;
   color: var(--rose-pink);
+}
+
+.infoBox {
+  color: #fff;
+  font-family: var(--primary-font-medium);
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--blush-rose);
+  width: fit-content;
+  border-radius: 4px;
+  align-self: flex-end;
 }
