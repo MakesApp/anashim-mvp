@@ -10,11 +10,15 @@ const Home = () => {
     <div>
       <main className={styles.home}>
         <HeroSection />
-        <div className={styles.listContainer}>
+        <section className={styles.listContainer}>
           <ProductsList />
-        </div>
-        <h2 className={styles.articleSectionTitle}>חדשות חמות מהתעשייה</h2>
-        <Article {...article} />
+        </section>
+        <section>
+          <h2 className={styles.articleSectionTitle}>חדשות חמות מהתעשייה</h2>
+          <div className={styles.articleContainer}>
+            <Article {...article} />
+          </div>
+        </section>
       </main>
     </div>
   );

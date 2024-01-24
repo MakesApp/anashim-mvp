@@ -3,4 +3,5 @@ export interface IArticle {
   brief: string;
   image: string;
   link: string;
+  logo: string;
 }
