@@ -4,7 +4,7 @@ import { AdditionalProps, TagProps } from './Tag.types';
 const Tag: React.FC<TagProps & AdditionalProps> = ({ name, icon, bgColor }) => {
   return (
     <div className={styles.container} style={{ background: bgColor }}>
-      <img className={styles.icon} src={icon} alt="tag icon" />
+      <img className={styles.icon} src={icon} alt="tag icon" loading="lazy" />
       <span className={styles.name}>{name}</span>
     </div>
   );

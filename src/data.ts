@@ -47,6 +47,7 @@ export default [
     link: 'https://www.teamme.io/',
     logo: teamMe,
     linkedIn: 'https://www.linkedin.com/company/teamme/?originalSubdomain=il',
+    date: '2024-01-08',
   },
   {
     name: 'Beyond Virtual',
@@ -62,6 +63,7 @@ export default [
     link: 'https://beyondvirtual.ai/',
     logo: beyondVirtual,
     linkedIn: 'https://www.linkedin.com/company/beyondvirtual/',
+    date: '2024-01-08',
   },
   {
     name: 'Canditech',
@@ -77,6 +79,7 @@ export default [
     link: 'https://www.canditech.io/',
     logo: candiTech,
     linkedIn: 'https://www.linkedin.com/company/canditech/',
+    date: '2024-01-08',
   },
   {
     name: 'TaTiO',
@@ -91,6 +94,7 @@ export default [
     link: 'https://www.tatio.il/',
     logo: taoTio,
     linkedIn: 'https://www.linkedin.com/company/tatio/',
+    date: '2024-01-08',
   },
   {
     name: 'YouAco',
@@ -106,6 +110,7 @@ export default [
     link: 'https://www.youaco.com/',
     logo: youAco,
     linkedIn: '',
+    date: '2024-01-08',
   },
   {
     name: 'מתגייסים לתעסוקה',
@@ -121,6 +126,7 @@ export default [
     link: 'https://www.mitgaisimletaasuka.co.il/',
     logo: metgaysim,
     linkedIn: '',
+    date: '2024-01-08',
   },
   {
     name: 'StellarNova',
@@ -136,6 +142,7 @@ export default [
     link: 'https://stellarnova.co/',
     logo: stellarNova,
     linkedIn: 'https://il.linkedin.com/company/stellarnova',
+    date: '2024-01-08',
   },
   {
     name: 'StartAlpha',
@@ -151,6 +158,7 @@ export default [
     logo: startAlpha,
     linkedIn:
       'https://www.linkedin.com/company/start-%D7%94%D7%97%D7%98%D7%99%D7%91%D7%94-%D7%9C%D7%97%D7%93%D7%A9%D7%A0%D7%95%D7%AA-%D7%98%D7%9B%D7%A0%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%AA-%D7%91%D7%9E%D7%A9%D7%A8%D7%93-%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A/',
+    date: '2024-01-21',
   },
   {
     name: 'MagniLearn',
@@ -165,6 +173,7 @@ export default [
     link: 'https://www.magnilearn.com/',
     logo: magniLearn,
     linkedIn: 'https://www.linkedin.com/company/magnilearn/',
+    date: '2024-01-08',
   },
   {
     name: 'Freshboard.city',
@@ -179,6 +188,7 @@ export default [
     link: 'https://freshboard.city/',
     logo: freshBoard,
     linkedIn: 'https://www.linkedin.com/company/freshboard/',
+    date: '2024-01-08',
   },
   {
     name: 'InBe Tech',
@@ -194,6 +204,7 @@ export default [
     link: 'https://www.inbe.me/',
     logo: inBE,
     linkedIn: 'https://www.linkedin.com/company/inbe-tech/jobs/',
+    date: '2024-01-08',
   },
   {
     name: 'Paths.careers',
@@ -208,6 +219,7 @@ export default [
     link: 'https://paths.careers/',
     logo: pathsCareers,
     linkedIn: 'https://www.linkedin.com/company/paths-careers...',
+    date: '2024-01-08',
   },
   {
     name: 'Elevation',
@@ -223,6 +235,7 @@ export default [
     link: 'https://elevation.ac/he/about-heb/',
     logo: Elevation,
     linkedIn: 'https://www.linkedin.com/school/elevation-corp...',
+    date: '2024-01-08',
   },
   {
     name: 'Juno Journey',
@@ -238,6 +251,7 @@ export default [
     link: 'https://junojourney.com/',
     logo: junoJourney,
     linkedIn: 'https://il.linkedin.com/company/junojourney',
+    date: '2024-01-08',
   },
   {
     name: 'Class.me',
@@ -252,6 +266,7 @@ export default [
     link: 'https://class.me/',
     logo: classMe,
     linkedIn: '',
+    date: '2024-01-08',
   },
   {
     name: 'Speak',
@@ -267,6 +282,7 @@ export default [
     link: 'https://speaknow.co.il/',
     logo: speak,
     linkedIn: 'https://www.linkedin.com/company/speak-your-pe...',
+    date: '2024-01-08',
   },
   {
     name: 'myInterview',
@@ -282,6 +298,7 @@ export default [
     link: 'https://myinterview.com/',
     logo: myInterview,
     linkedIn: 'https://www.linkedin.com/company/myinterview',
+    date: '2024-01-08',
   },
   {
     name: 'Talking English',
@@ -296,6 +313,7 @@ export default [
     link: 'https://talkingenglish.com/',
     logo: talkingEnglish,
     linkedIn: 'https://www.linkedin.com/company/talking-english',
+    date: '2024-01-08',
   },
   {
     name: 'Skillsup',
@@ -311,6 +329,7 @@ export default [
     link: 'https://skillsup.com/',
     logo: skillsup,
     linkedIn: 'https://www.linkedin.com/company/skillsup',
+    date: '2024-01-08',
   },
   {
     name: 'קמפוסIL',
@@ -326,6 +345,7 @@ export default [
     link: 'https://campus.gov.il/',
     logo: campusIL,
     linkedIn: '',
+    date: '2024-01-10',
   },
   {
     name: 'עבודאטה',
@@ -340,6 +360,7 @@ export default [
     link: 'https://avodata.gov.il/',
     logo: avodata,
     linkedIn: '',
+    date: '2024-01-18',
   },
   {
     name: 'SkillIl',
@@ -355,6 +376,7 @@ export default [
     link: 'https://skillil.org/',
     logo: skillIL,
     linkedIn: 'https://www.linkedin.com/company/skillil',
+    date: '2024-01-18',
   },
   {
     name: 'Job360',
@@ -370,6 +392,7 @@ export default [
     link: 'https://job360.org/',
     logo: job360,
     linkedIn: 'https://www.linkedin.com/company/job360',
+    date: '2024-01-08',
   },
   {
     name: 'Makes',
@@ -385,6 +408,7 @@ export default [
     link: 'https://makes.org.il/',
     logo: makes,
     linkedIn: 'https://www.linkedin.com/company/makes',
+    date: '2024-01-08',
   },
   {
     name: 'Watoobi',
@@ -400,6 +424,7 @@ export default [
     link: 'https://watoobi.com/',
     logo: watoobi,
     linkedIn: 'https://www.linkedin.com/company/watoobi',
+    date: '2024-01-08',
   },
   {
     name: 'Bites',
@@ -415,6 +440,7 @@ export default [
     link: 'https://mybites.io/',
     logo: bites,
     linkedIn: 'https://www.linkedin.com/company/bites-learning/',
+    date: '2024-01-08',
   },
   {
     name: 'PlaceIL',
@@ -430,6 +456,7 @@ export default [
     link: 'https://placeil.org/',
     logo: placeIL,
     linkedIn: 'https://www.linkedin.com/company/placeil',
+    date: '2024-01-08',
   },
   {
     name: 'SFI',
@@ -445,6 +472,7 @@ export default [
     link: 'https://appleseeds-team.monday.com/protected_static/3110258/resources/1217843722/SFI_logo_2016__master_colour_Boarder.jpg',
     logo: SFI,
     linkedIn: 'https://www.linkedin.com/company/social-finance-israel',
+    date: '2024-01-08',
   },
   {
     name: 'עובד לי',
@@ -459,6 +487,7 @@ export default [
     link: 'https://appleseeds-team.monday.com/protected_static/3110258/resources/1211393089/%D7%A2%D7%95%D7%91%D7%93%20%D7%9C%D7%99%20%20-%20%D7%9E%D7%A4%D7%A7%D7%A9.jpg',
     logo: ovedLI,
     linkedIn: '',
+    date: '2024-01-08',
   },
   {
     name: 'Edge Rethinking Education',
@@ -474,6 +503,7 @@ export default [
     link: '',
     logo: edge,
     linkedIn: '',
+    date: '2024-01-08',
   },
   {
     name: 'ADHDoTech',
@@ -489,6 +519,7 @@ export default [
     link: '',
     logo: adHD,
     linkedIn: '',
+    date: '2024-01-08',
   },
   {
     name: 'AI Junk',
@@ -504,6 +535,7 @@ export default [
     link: '',
     logo: AIJunk,
     linkedIn: '',
+    date: '2024-01-08',
   },
   {
     name: 'Tov Tech',
@@ -519,5 +551,6 @@ export default [
     link: '',
     logo: tovTech,
     linkedIn: '',
+    date: '2024-01-08',
   },
 ] as Product[];

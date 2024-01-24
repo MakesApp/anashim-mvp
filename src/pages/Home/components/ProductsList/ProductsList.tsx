@@ -1,11 +1,12 @@
 import ProductCard from '@components/ProductCard/ProductCard';
 import styles from './ProductsList.module.css';
-import data from '../../../../data';
+import getLastFourProducts from '@utils/getLastAddedProducts';
 
 const ProductsList = () => {
+  const lastFourProducts = getLastFourProducts();
   return (
     <ul className={styles.list}>
-      {[...data.slice(0, 3)].map((p) => {
+      {[...lastFourProducts].map((p) => {
         return <ProductCard key={p.name} {...p} />;
       })}
     </ul>

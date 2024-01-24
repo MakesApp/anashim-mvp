@@ -16,6 +16,8 @@ html {
 
 body {
   box-sizing: border-box;
+  max-width: 1920px;
+  overflow-x: hidden;
   direction: rtl;
   color: var(--charcoal-gray);
   /* font-family: var(--primary-font); */
