@@ -20,8 +20,7 @@
 .companyName {
   margin-top: 1.5rem;
   font-size: 20px;
-  font-family: var(--primary-font-bold);
-  line-height: 0.7;
+  font-family: var(--primary-font-900);
 }
 
 .textContainer {
@@ -29,14 +28,14 @@
 }
 .lastAdded {
   font-size: 1.2rem;
-  font-family: var(--primary-font-regular);
+  font-family: var(--primary-font-600);
   letter-spacing: 0.066px;
   color: var(--rose-pink);
 }
 
 .infoBox {
   color: #fff;
-  font-family: var(--primary-font-medium);
+  font-family: var(--primary-font-600);
   font-size: 1.4rem;
   padding: 0.8rem 1.2rem;
   background-color: var(--blush-rose);
