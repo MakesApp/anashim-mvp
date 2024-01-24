@@ -32,7 +32,8 @@ import AIJunk from '@assets/icons/products/AI-junk.webp';
 import tovTech from '@assets/icons/products/Tov-Tech.png';
 import bites from '@assets/icons/products/Bites-Logo.svg';
 import youAco from '@assets/icons/products/YOUACO.png';
-export default [
+import articlePreview from '@assets/images/articles/Article-Preview-image.jpg';
+export const prodcuts = [
   {
     name: 'Team.me',
     type: 'מיזם',
@@ -554,3 +555,11 @@ export default [
     date: '2024-01-08',
   },
 ] as Product[];
+export const articles = [
+  {
+    image: articlePreview,
+    title: `﻿למצוא עבודה ל-12 אלף מפונים: כך נולד מיזם התעסוקה "710 מערב`,
+    brief: `היזמת חנה רדו הקימה, בשיתוף קרן מיראז' ומועצה אזורית אשכול, מיזם שנועד לסייע למפונים במלונות ים המלח ואילת לחזור לשגרת עבודה • "התעסוקה הכרחית לבריאות הגוף והנפש", היא אומרת`,
+    link: 'https://www.globes.co.il/news/article.aspx?did=1001464034',
+  },
+];
