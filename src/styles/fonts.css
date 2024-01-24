@@ -1,16 +1,32 @@
 @font-face {
-  font-family: 'FONT_NAME_HERE-EXAMPLE-BOLD';
-  font-weight: FONT_WEIGHT_HERE;
-  font-display: DISPLAY_BEHAVIOR;
+  font-family: 'Pauza 400';
   src:
-    local('LOCAL_FONT_NAME_HERE'),
-    url('PATH_TO_FONT_FILE_HERE') format('FONT_FORMAT_HERE');
-  /* ... other fonts ... */
+    local('Pauza Regular'),
+    url('@assets/fonts/Pauza Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pauza 600';
+  src:
+    local('Pauza Medium'),
+    url('@assets/fonts/Pauza Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pauza 700';
+  src:
+    local('Pauza Bold'),
+    url('@assets/fonts/Pauza Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pauza 900';
+  src:
+    local('Pauza Black'),
+    url('@assets/fonts/Pauza Black.ttf') format('truetype');
 }
 
 :root {
-  --primary-font-bold: 'Pauza Bold', sans-serif;
-  --primary-font-regular: 'Pauza Regular', sans-serif;
-  --primary-font-thin: 'Pauza Thin', sans-serif;
-  --primary-font-medium: 'Pauza Medium', sans-serif;
+  --primary-font-400: 'Pauza Regular', sans-serif;
+  --primary-font-600: 'Pauza Medium', sans-serif;
+  --primary-font-700: 'Pauza Bold', sans-serif;
+  --primary-font-900: 'Pauza Black', sans-serif;
 }
