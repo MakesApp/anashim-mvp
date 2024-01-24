@@ -5,7 +5,6 @@
   position: relative;
   height: 11.2rem;
   margin: 2rem 0;
-  max-width: 300px;
 }
 
 .quoteIcon {
@@ -13,9 +12,12 @@
 }
 
 .text {
-  padding-right: 2.5rem;
   display: block;
+  padding-right: 2.5rem;
   line-height: 16px;
   font-family: var(--primary-font-regular);
   font-size: 1.4rem;
+  overflow: hidden;
+  height: 100%;
+  text-overflow: ellipsis;
 }

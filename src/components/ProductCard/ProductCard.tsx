@@ -19,7 +19,7 @@ const ProductCard: React.FC<Product> = ({
     <Link className={styles.link} to={{ pathname: '/' }}>
       <Ribbon />
       <div className={styles.container}>
-        <img className={styles.logo} src={logo} alt={logo + ' logo'} />
+        <img className={styles.logo} src={logo} alt={logo + ' logo'} loading="lazy" />
         <div className={styles.textContainer}>
           <h3 className={styles.companyName}>{name}</h3>
           {lastAdded && <span className={styles.lastAdded}>נוספו לאחרונה</span>}

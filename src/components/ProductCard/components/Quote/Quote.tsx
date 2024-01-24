@@ -4,7 +4,7 @@ import { IQuoteProps } from './Quote.types';
 const Quote: React.FC<IQuoteProps> = ({ text }) => {
   return (
     <div className={styles.container}>
-      <img className={styles.quoteIcon} src={quote} alt="quote" />
+      <img className={styles.quoteIcon} src={quote} alt="quote" loading="lazy" />
       <p className={styles.text}>{text}</p>
     </div>
   );

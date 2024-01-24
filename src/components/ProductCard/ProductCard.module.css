@@ -8,12 +8,14 @@
   padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  width: fit-content;
   border: 1px solid #dfdfdf;
+  width: 300px;
 }
 
 .logo {
-  max-height: 10rem;
+  height: 10rem;
+  max-height: 100%;
+  width: auto;
 }
 
 .companyName {

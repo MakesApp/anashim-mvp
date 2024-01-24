@@ -12,4 +12,5 @@ export type Product = {
   link: string;
   logo: string;
   linkedIn: string;
+  date: string;
 };
