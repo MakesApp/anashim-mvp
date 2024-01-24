@@ -28,3 +28,9 @@
   font-size: 6rem;
   font-family: var(--primary-font-bold);
 }
+
+.subTitle {
+  font-size: 3.6rem;
+  text-align: center;
+  font-family: var(--primary-font-regular);
+}

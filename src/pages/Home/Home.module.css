@@ -17,3 +17,8 @@
   text-align: center;
   margin: 3% 0;
 }
+
+.articleContainer {
+  display: flex;
+  justify-content: center;
+}

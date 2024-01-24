@@ -3,4 +3,5 @@
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 1.5rem;
+  justify-content: center;
 }

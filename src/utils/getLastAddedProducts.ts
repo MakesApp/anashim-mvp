@@ -1,7 +1,7 @@
-import data from '../data';
+import { prodcuts } from '../data';
 
 export default function getLastFourProducts() {
-  const sortedData = data.sort((a, b) => {
+  const sortedData = prodcuts.sort((a, b) => {
     const timestampA = new Date(a.date).getTime();
     const timestampB = new Date(b.date).getTime();
 
