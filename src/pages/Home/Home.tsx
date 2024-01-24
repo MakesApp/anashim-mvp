@@ -1,19 +1,24 @@
+import Article from '@components/Article/Article';
 import styles from './Home.module.css';
-import hero from '@assets/images/hero.jpg';
 
 import HeroSection from './components/HeroSection/HeroSection';
 import ProductsList from './components/ProductsList/ProductsList';
+import { articles } from '@/data';
+const article = articles[0];
 const Home = () => {
   return (
     <div>
       <main className={styles.home}>
-        <div className={styles.heroSectionContainer}>
-          <img className={styles.heroImg} loading="lazy" src={hero} alt="hero" />
-          <HeroSection />
-        </div>
-        <div className={styles.listContainer}>
+        <HeroSection />
+        <section className={styles.listContainer}>
           <ProductsList />
-        </div>
+        </section>
+        <section>
+          <h2 className={styles.articleSectionTitle}>חדשות חמות מהתעשייה</h2>
+          <div className={styles.articleContainer}>
+            <Article {...article} />
+          </div>
+        </section>
       </main>
     </div>
   );
