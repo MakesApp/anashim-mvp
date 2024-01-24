@@ -19,7 +19,7 @@ const AccordionDemo: FC<AccordionProps> = ({ title, width, children }) => {
       type="single"
       collapsible
     >
-      <Accordion.Item className="AccordionItem" value="item-1">
+      <Accordion.Item className="AccordionItem" value={title}>
         <AccordionTrigger>{title}</AccordionTrigger>
 
         <AccordionContent>{children}</AccordionContent>

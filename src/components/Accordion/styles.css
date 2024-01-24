@@ -10,10 +10,14 @@ h3 {
 
 .AccordionRoot {
   border-radius: 4px;
-  background: orange;
+  background: var(--white);
+  align-self: flex-start;
+  position: relative;
+  z-index: 9;
 }
 
 .AccordionItem {
+  color: var(--charcoal-gray);
   overflow: hidden;
   margin-top: 1px;
 }
@@ -44,6 +48,7 @@ h3 {
   font-family: var(--primary-font-regular);
   background-color: transparent;
   padding-right: 12px;
+  padding-left: 12px;
   height: 48px;
   flex: 1;
   display: flex;
@@ -56,15 +61,11 @@ h3 {
   box-shadow: 0 1px 0 var(--mauve-6);
 }
 
-.AccordionTrigger:hover {
-  background-color: var(--mauve-2);
-}
-
 .AccordionContent {
   overflow: hidden;
-  font-size: 15px;
-  color: var(--mauve-11);
-  background-color: red;
+  font-size: 20px;
+  background-color: inherit;
+  font-family: var(--primary-font-thin);
 }
 .AccordionContent[data-state='open'] {
   animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
