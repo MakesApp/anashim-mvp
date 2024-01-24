@@ -56,7 +56,10 @@ const AccordionContent = React.forwardRef<HTMLDivElement, AccordionContentProps>
       {...props}
       ref={forwardedRef}
     >
-      <div className="AccordionContentText">{children}</div>
+      <div className="AccordionContentText">
+        <hr />
+        <div className="AccordionContentTextInner">{children}</div>
+      </div>
     </Accordion.Content>
   ),
 );
