@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  column-gap: 0.7rem;
+  align-items: center;
+  direction: ltr;
+}
+
+.text {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,20 @@
+.detail {
+  display: flex;
+}
+
+.private {
+}
+
+.public {
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+.text {
+  text-decoration: underline;
+}

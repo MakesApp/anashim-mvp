@@ -37,6 +37,7 @@ import articlePreview from '@assets/images/articles/Article-Preview-image.jpg';
 import { IArticle } from './localTypes/article.types';
 export const prodcuts = [
   {
+    id: '1',
     name: 'Team.me',
     type: 'מיזם',
     sector: 'עסקי',
@@ -53,6 +54,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '2',
     name: 'Beyond Virtual',
     type: 'מיזם',
     sector: 'עסקי',
@@ -69,6 +71,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '3',
     name: 'Canditech',
     type: 'מיזם',
     sector: 'עסקי',
@@ -85,6 +88,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '4',
     name: 'TaTiO',
     type: 'מיזם',
     sector: 'עסקי',
@@ -100,6 +104,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '5',
     name: 'YouAco',
     type: 'פלטפורמה',
     sector: 'חברתי',
@@ -116,6 +121,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '6',
     name: 'מתגייסים לתעסוקה',
     type: 'תוכנית',
     sector: 'חברתי',
@@ -132,6 +138,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '7',
     name: 'StellarNova',
     type: 'מיזם',
     sector: 'חברתי',
@@ -148,6 +155,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '8',
     name: 'StartAlpha',
     type: 'תוכנית',
     sector: 'ציבורי',
@@ -164,6 +172,7 @@ export const prodcuts = [
     date: '2024-01-21',
   },
   {
+    id: '9',
     name: 'MagniLearn',
     type: 'מיזם',
     sector: 'עסקי',
@@ -179,6 +188,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '10',
     name: 'Freshboard.city',
     type: 'מיזם',
     sector: 'עסקי',
@@ -194,6 +204,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '11',
     name: 'InBe Tech',
     type: 'מיזם',
     sector: 'עסקי',
@@ -210,6 +221,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '12',
     name: 'Paths.careers',
     type: 'פלטפורמה',
     sector: 'עסקי',
@@ -225,6 +237,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '13',
     name: 'Elevation',
     type: 'תוכנית',
     sector: 'עסקי',
@@ -241,6 +254,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '14',
     name: 'Juno Journey',
     type: 'מיזם',
     sector: 'עסקי',
@@ -257,6 +271,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '15',
     name: 'Class.me',
     type: 'מיזם',
     sector: 'עסקי',
@@ -272,6 +287,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '16',
     name: 'Speak',
     type: 'תוכנית',
     sector: 'עסקי',
@@ -288,6 +304,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '17',
     name: 'myInterview',
     type: 'מיזם',
     sector: 'עסקי',
@@ -304,6 +321,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '18',
     name: 'Talking English',
     type: 'פלטפורמה',
     sector: 'עסקי',
@@ -319,6 +337,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '19',
     name: 'Skillsup',
     type: 'מיזם',
     sector: 'עסקי',
@@ -335,6 +354,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '20',
     name: 'קמפוסIL',
     type: 'מיזם',
     sector: 'ציבורי',
@@ -351,6 +371,7 @@ export const prodcuts = [
     date: '2024-01-10',
   },
   {
+    id: '21',
     name: 'עבודאטה',
     type: 'מיזם',
     sector: 'ציבורי',
@@ -366,6 +387,7 @@ export const prodcuts = [
     date: '2024-01-18',
   },
   {
+    id: '22',
     name: 'SkillIl',
     type: 'פלטפורמה',
     sector: 'ציבורי',
@@ -382,6 +404,7 @@ export const prodcuts = [
     date: '2024-01-18',
   },
   {
+    id: '23',
     name: 'Job360',
     type: 'מיזם',
     sector: 'חברתי',
@@ -398,6 +421,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '24',
     name: 'Makes',
     type: 'מיזם',
     sector: 'חברתי',
@@ -414,6 +438,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '25',
     name: 'Watoobi',
     type: 'פלטפורמה',
     sector: 'חברתי',
@@ -430,6 +455,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '26',
     name: 'Bites',
     type: 'מיזם',
     sector: 'עסקי',
@@ -446,6 +472,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '27',
     name: 'PlaceIL',
     type: 'מיזם',
     sector: 'חברתי',
@@ -462,6 +489,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '28',
     name: 'SFI',
     type: 'פלטפורמה',
     sector: 'חברתי',
@@ -478,6 +506,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '29',
     name: 'עובד לי',
     type: 'מיזם',
     sector: 'חברתי',
@@ -493,6 +522,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '30',
     name: 'Edge Rethinking Education',
     type: 'פלטפורמה',
     sector: 'חברתי',
@@ -509,6 +539,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '31',
     name: 'ADHDoTech',
     type: 'מיזם',
     sector: 'חברתי',
@@ -525,6 +556,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '32',
     name: 'AI Junk',
     type: 'פלטפורמה',
     sector: 'עסקי',
@@ -541,6 +573,7 @@ export const prodcuts = [
     date: '2024-01-08',
   },
   {
+    id: '33',
     name: 'Tov Tech',
     type: 'מיזם',
     sector: 'חברתי',

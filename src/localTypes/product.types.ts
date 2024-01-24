@@ -1,6 +1,7 @@
 import { Field, Sector, Type } from '@utils/enum';
 
 export type Product = {
+  id: string;
   name: string;
   type: Type;
   sector: Sector;

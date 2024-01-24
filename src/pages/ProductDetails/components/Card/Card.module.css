@@ -1,0 +1,18 @@
+.container {
+  padding: 2%;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  display: flex;
+  column-gap: 3.6rem;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.6rem;
+}
+.logo {
+}
+
+.rightLeft {
+}
