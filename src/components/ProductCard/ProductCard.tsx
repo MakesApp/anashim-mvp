@@ -4,7 +4,6 @@ import Ribbon from './components/Ribbon/Ribbon';
 import React from 'react';
 import TagList from '../TagList/TagList';
 import Quote from '../Quote/Quote';
-import { Product } from 'src/localTypes/product.types';
 import { ProductCardProps } from './ProductCard.types';
 const ProductCard: React.FC<ProductCardProps> = ({
   logo,
