@@ -14,9 +14,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   email,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
-  console.log('====================================');
-  console.log(showDetails);
-  console.log('====================================');
+
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
   };

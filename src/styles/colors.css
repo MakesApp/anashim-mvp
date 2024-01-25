@@ -5,11 +5,17 @@
   --rose-pink: #d8788b;
   --pearl-white: #f6f6f6;
   --charcoal-gray: #404040;
+  --white: #fff;
+  --gray: #a2a2a2;
+  --gray-light: #86868b;
 
   /*tags*/
   --plum-wine: #874778;
+  --plum-wine-light: #c679b4;
   --coral-blush: #dd846b;
+  --coral-blush-light: #fcb7a3;
   --midnight-blue: #514989;
+  --midnight-blue-light: #9a8fe7;
 
   /* ... other color variables ... */
 }

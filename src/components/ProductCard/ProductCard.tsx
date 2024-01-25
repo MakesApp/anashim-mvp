@@ -18,6 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   lastAdded,
 }) => {
   const tags: [TagProps[], TagProps[]] = getManipulatedTags({ fields, sector, type });
+
   return (
     <Link className={styles.link} to={{ pathname: `/product/${id}` }}>
       <Ribbon />

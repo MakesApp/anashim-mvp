@@ -1,0 +1,16 @@
+.container {
+  display: inline-block;
+  padding: 30px;
+  padding-bottom: 46px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  height: 160px;
+}
+.title {
+  color: var(--white);
+  text-align: right;
+  font-size: 30px;
+  font-family: var(--primary-font-bold);
+  letter-spacing: 0.38px;
+  margin-bottom: 16px;
+}
