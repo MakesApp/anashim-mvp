@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './GoBack.module.css';
-import arrowLeft from '@assets/icons/arrowleft.svg';
+import arrowLeft from '@assets/icons/arrowLeft.svg';
 const GoBack = () => {
   return (
     <Link to={'/'}>
