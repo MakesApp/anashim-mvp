@@ -5,7 +5,8 @@ import React from 'react';
 import TagList from '../TagList/TagList';
 import Quote from '../Quote/Quote';
 import { Product } from 'src/localTypes/product.types';
-const ProductCard: React.FC<Product> = ({
+import { ProductCardProps } from './ProductCard.types';
+const ProductCard: React.FC<ProductCardProps> = ({
   logo,
   type,
   sector,
@@ -13,8 +14,8 @@ const ProductCard: React.FC<Product> = ({
   name,
   shortDescription,
   id,
+  lastAdded,
 }) => {
-  const lastAdded = true;
   const tags = [...fields, type, sector];
   return (
     <Link className={styles.link} to={{ pathname: `/product/${id}` }}>
