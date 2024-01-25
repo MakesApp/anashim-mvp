@@ -16,21 +16,12 @@
 .lowOpacity {
   opacity: 0.5;
 }
-.private {
-}
 
-.public {
-}
 
-.list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-}
 .linksContainer {
   display: flex;
   flex-direction: column;
-  row-gap: 4rem;
+  row-gap: 1.5rem;
 }
 .hidden {
   display: none;
