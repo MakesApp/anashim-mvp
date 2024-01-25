@@ -5,3 +5,11 @@
   row-gap: 1.5rem;
   justify-content: center;
 }
+
+.listItem{
+  flex: 1;
+  width: 100%;
+  max-width: 300px;
+  flex-basis: 275px;
+
+}

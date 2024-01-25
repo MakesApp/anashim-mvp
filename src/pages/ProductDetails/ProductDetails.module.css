@@ -1,14 +1,18 @@
 .container {
-  flex: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 .content {
-  padding: 1.5% 18% 8.5% 18%;
+  padding: calc(1.5% + 10rem) 0 8.5% 0;
 }
 .bgImg {
+  top: 0;
+  height: 0;
+  position: absolute;
+  width: 100vw;
+  right: -12.5%;
   height: 10rem;
-  width: 100%;
 }
 /* .container::after {
   position: absolute;
