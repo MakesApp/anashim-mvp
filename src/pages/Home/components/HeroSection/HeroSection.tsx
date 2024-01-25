@@ -12,7 +12,9 @@ const HeroSection = () => {
 
         <div>
           <h1 className={styles.title}>למצוא את כל מה שחדש בפיתוח ההון האנושי</h1>
-          <SearchFilterBar />
+          <div className={styles.searchBarContainer}>
+            <SearchFilterBar />
+          </div>
           <h2 className={styles.subTitle}>שימו לב לארגונים האחרונים שהצטרפו ל-HUB</h2>
         </div>
       </div>

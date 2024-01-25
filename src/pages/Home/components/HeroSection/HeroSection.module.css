@@ -19,6 +19,14 @@
 
   z-index: -1;
 }
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
 .intro {
   display: block;
   font-size: 2rem;

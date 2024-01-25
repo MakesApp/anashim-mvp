@@ -1,9 +1,10 @@
 import React from 'react';
 import MainLayout from '@layouts/MainLayout';
-const Home = React.lazy(() => import('@pages/Home'));
+import Home from '@pages/Home';
 const Product = React.lazy(() => import('@pages/Product'));
 const Article = React.lazy(() => import('@pages/Article'));
 const NotFound = React.lazy(() => import('@components/NotFound'));
+const SearchProduct = React.lazy(() => import('@pages/SearchProduct'));
 export const routes = [
   {
     path: '/',
@@ -26,6 +27,14 @@ export const routes = [
     element: (
       <MainLayout>
         <Article />
+      </MainLayout>
+    ),
+  },
+  {
+    path: '/search',
+    element: (
+      <MainLayout>
+        <SearchProduct />
       </MainLayout>
     ),
   },

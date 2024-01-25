@@ -1,5 +1,6 @@
 export interface AccordionOptionProps {
   name: string;
   isSelected: boolean;
-  callback: (name: string) => void;
+  title: string;
+  callback: (title: string, name: string) => void;
 }
