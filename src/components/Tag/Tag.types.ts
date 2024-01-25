@@ -1,8 +1,5 @@
 export type TagProps = {
-  name: string;
+  text: string;
   icon: string;
-};
-
-export type AdditionalProps = {
   bgColor: string;
 };

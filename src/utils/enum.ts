@@ -2,6 +2,7 @@ export enum Type {
   project = 'מיזם',
   program = 'תוכנית',
   platform = 'פלטפורמה',
+  other = 'אחר',
 }
 
 export enum Field {
@@ -14,4 +15,5 @@ export enum Sector {
   public = 'ציבורי',
   social = 'חברתי',
   business = 'עסקי',
+  other = 'אחר',
 }

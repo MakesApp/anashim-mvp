@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.css';
 import Ribbon from './components/Ribbon/Ribbon';
 import React from 'react';
 import TagList from '../TagList/TagList';
 import Quote from '../Quote/Quote';
 import { ProductCardProps } from './ProductCard.types';
+import getManipulatedTags from '@/utils/getManipulatedTags';
+import { TagProps } from '../Tag/Tag.types';
+import { Link } from 'react-router-dom';
 const ProductCard: React.FC<ProductCardProps> = ({
   logo,
   type,
@@ -15,7 +17,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   id,
   lastAdded,
 }) => {
-  const tags = [...fields, type, sector];
+  const tags: [TagProps[], TagProps[]] = getManipulatedTags({ fields, sector, type });
   return (
     <Link className={styles.link} to={{ pathname: `/product/${id}` }}>
       <Ribbon />
@@ -26,12 +28,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
           {lastAdded && <span className={styles.lastAdded}>נוספו לאחרונה</span>}
         </div>
         <div className={styles.tagsContainer}>
-          <TagList tags={tags} />
+          <TagList manipulatedTags={tags} />
         </div>
         <div className={styles.quoteContainer}>
           <Quote text={shortDescription} />
         </div>
-        <div className={styles.infoBox}>להציג מידע</div>
+        <div className={styles.infoBox}>למידע נוסף</div>
       </div>
     </Link>
   );

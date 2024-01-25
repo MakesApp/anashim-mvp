@@ -3,6 +3,7 @@ import styles from './Card.module.css';
 import ContactDetails from '../ContactDetails/ContactDetails';
 import TagList from '@/components/TagList/TagList';
 import Quote from '@/components/Quote/Quote';
+import getManipulatedTags from '@/utils/getManipulatedTags';
 
 const Card: React.FC<Product> = ({
   logo,
@@ -17,7 +18,7 @@ const Card: React.FC<Product> = ({
   description,
   type,
 }) => {
-  const tags = [...fields, type, sector];
+  const tags = getManipulatedTags({ fields, sector, type });
   return (
     <div className={styles.container}>
       <div className={styles.rightSide}>
@@ -30,7 +31,7 @@ const Card: React.FC<Product> = ({
         <h2 className={styles.name}>{name}</h2>
         <p className={styles.shortDescription}>{shortDescription}</p>
         <div className={styles.tagsContainer}>
-          <TagList tags={tags} />
+          <TagList manipulatedTags={tags} />
         </div>
         <div className={styles.quoteContainer}>
           <Quote text={description} />

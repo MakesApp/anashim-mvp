@@ -21,7 +21,7 @@
 .intro {
   display: block;
   font-size: 2rem;
-  font-family: var(--primary-font-600);
+  font-family: var(--primary-font-light-400);
   letter-spacing: 0.38px;
   span {
     display: block;
@@ -37,4 +37,9 @@
   font-size: 3.6rem;
   text-align: center;
   font-family: var(--primary-font-600);
+}
+
+.bold {
+  font-size: 2.6rem;
+  font-family: var(--primary-font-700);
 }
