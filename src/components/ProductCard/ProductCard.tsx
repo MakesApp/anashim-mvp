@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.css';
 import Ribbon from './components/Ribbon/Ribbon';
 import React from 'react';
-import TagList from './components/TagList/TagList';
-import Quote from './components/Quote/Quote';
+import TagList from '../TagList/TagList';
+import Quote from '../Quote/Quote';
 import { Product } from 'src/localTypes/product.types';
 const ProductCard: React.FC<Product> = ({
   logo,
@@ -12,11 +12,12 @@ const ProductCard: React.FC<Product> = ({
   fields,
   name,
   shortDescription,
+  id,
 }) => {
   const lastAdded = true;
   const tags = [...fields, type, sector];
   return (
-    <Link className={styles.link} to={{ pathname: '/' }}>
+    <Link className={styles.link} to={{ pathname: `/product/${id}` }}>
       <Ribbon />
       <div className={styles.container}>
         <img className={styles.logo} src={logo} alt={logo + ' logo'} loading="lazy" />
@@ -24,8 +25,12 @@ const ProductCard: React.FC<Product> = ({
           <h3 className={styles.companyName}>{name}</h3>
           {lastAdded && <span className={styles.lastAdded}>נוספו לאחרונה</span>}
         </div>
-        <TagList tags={tags} />
-        <Quote text={shortDescription} />
+        <div className={styles.tagsContainer}>
+          <TagList tags={tags} />
+        </div>
+        <div className={styles.quoteContainer}>
+          <Quote text={shortDescription} />
+        </div>
         <div className={styles.infoBox}>להציג מידע</div>
       </div>
     </Link>
