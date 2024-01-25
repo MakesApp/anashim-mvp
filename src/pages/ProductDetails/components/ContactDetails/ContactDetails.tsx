@@ -14,9 +14,6 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   email,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
-  console.log('====================================');
-  console.log(showDetails);
-  console.log('====================================');
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
   };
@@ -86,7 +83,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
       </div>
       {!showDetails && (
         <button onClick={toggleDetailsBtn} className={styles.button}>
-          להציג פרטי תקשורת
+          להציג פרטי התקשרות
         </button>
       )}
     </div>
