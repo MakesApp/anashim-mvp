@@ -182,6 +182,9 @@ textarea {
   margin: 0;
   /* 2 */
 }
+button {
+  line-height: 0;
+}
 
 /**
  * Show the overflow in IE.
