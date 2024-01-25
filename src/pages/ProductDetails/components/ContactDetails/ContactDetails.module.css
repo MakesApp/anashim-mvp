@@ -23,18 +23,26 @@
   flex-direction: column;
   row-gap: 1.5rem;
 }
-.hidden {
-  display: none;
-}
+
 .name {
   line-height: 1.5;
   text-decoration: underline;
-  direction: ltr;
   font-family: var(--primary-font-600);
   font-size: 1.4rem;
+  display: flex;
+  column-gap: 0.8rem;
   img {
-    margin-right: 0.8rem;
+    padding-top: 0.25rem;
+    align-self: flex-start;
   }
+  span{
+  direction: ltr;
+
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 .button {

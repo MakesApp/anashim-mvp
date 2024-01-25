@@ -14,6 +14,8 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   email,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
+  console.log(showDetails);
+  
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
   };
@@ -50,13 +52,13 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
               loading="lazy"
             />
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
+           <span>   {link}</span>
               <img
                 src={linkIcon}
                 alt="link icon"
                 loading="lazy"
                 className={`${showDetails ? '' : styles.hidden}`}
               />
-              {link}
             </span>
           </a>}
        {linkedIn&&   <a href={linkedIn} target="_blank" className={styles.detail}>
@@ -67,13 +69,16 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
               loading="lazy"
             />
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
+                 <span>
+              {linkedIn}
+              </span>
               <img
                 className={`${showDetails ? '' : styles.hidden}`}
                 src={linkIcon}
                 alt="link icon"
                 loading="lazy"
               />
-              {linkedIn}
+           
             </span>
           </a>
           }
