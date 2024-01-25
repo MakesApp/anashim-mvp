@@ -6,7 +6,6 @@ import { tagsObj } from '@utils/constants';
 const TagList: React.FC<{ tags: (keyof typeof tagsObj)[] }> = ({ tags }) => {
   const tagsWithAdditionalData = getTagsIconByName(tags);
 
-  // Separate tags into two arrays based on their "group" property
   const typeAndSectorTags = tagsWithAdditionalData.filter(
     (tag) => tag.group === 'type' || tag.group === 'sector',
   );

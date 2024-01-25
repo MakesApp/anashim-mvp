@@ -37,8 +37,8 @@
 }
 .name {
   line-height: 1.5;
-  flex: 1;
   text-decoration: underline;
+  direction: ltr;
   font-family: var(--primary-font-600);
   font-size: 1.4rem;
   img {

@@ -13,9 +13,10 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   linkedIn,
   email,
 }) => {
-  console.log(phone, link);
-
   const [showDetails, setShowDetails] = useState(false);
+  console.log('====================================');
+  console.log(showDetails);
+  console.log('====================================');
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
   };
@@ -34,7 +35,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
               {phone}
             </span>
           </div>
-          <div className={styles.detail}>
+          <a href={`mailto:${email}`} className={styles.detail} target="_blank">
             <img
               className={`${styles.icon} ${showDetails ? '' : styles.lowOpacity}`}
               src={emailIcon}
@@ -44,22 +45,22 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
               {email}
             </span>
-          </div>
+          </a>
           <a href={link} target="_blank" className={styles.detail}>
             <img
               className={`${styles.icon} ${showDetails ? '' : styles.lowOpacity}`}
               src={webIcon}
-              alt="email"
+              alt="web icon"
               loading="lazy"
             />
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
-              {link}
               <img
                 src={linkIcon}
                 alt="link icon"
                 loading="lazy"
                 className={`${showDetails ? '' : styles.hidden}`}
               />
+              {link}
             </span>
           </a>
         </div>
@@ -72,13 +73,13 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
               loading="lazy"
             />
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
-              {linkedIn}
               <img
                 className={`${showDetails ? '' : styles.hidden}`}
                 src={linkIcon}
                 alt="link icon"
                 loading="lazy"
               />
+              {linkedIn}
             </span>
           </a>
         </div>
