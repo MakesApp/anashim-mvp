@@ -1,5 +1,17 @@
 @font-face {
-  font-family: 'Pauza 400';
+  font-family: 'Pauza Thin 400';
+  src:
+    local('Pauza Thin'),
+    url('@assets/fonts/Pauza Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pauza Light 400';
+  src:
+    local('Pauza Light'),
+    url('@assets/fonts/Pauza Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pauza Regular 400';
   src:
     local('Pauza Regular'),
     url('@assets/fonts/Pauza Regular.ttf') format('truetype');
@@ -25,7 +37,9 @@
 }
 
 :root {
-  --primary-font-400: 'Pauza Regular', sans-serif;
+  --primary-font-thin-400: 'Pauza Thin 400', sans-serif;
+  --primary-font-light-400: 'Pauza Light 400', sans-serif;
+  --primary-font-regular-400: 'Pauza Regular 400', sans-serif;
   --primary-font-600: 'Pauza Medium', sans-serif;
   --primary-font-700: 'Pauza Bold', sans-serif;
   --primary-font-900: 'Pauza Black', sans-serif;

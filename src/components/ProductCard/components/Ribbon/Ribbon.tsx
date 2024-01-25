@@ -5,7 +5,7 @@ const Ribbon = () => {
   return (
     <div className={styles.ribbon}>
       <img loading="lazy" src={stars} alt="stars" />
-      <span className={styles.text}>העדכנית ביותר</span>
+      <span className={styles.text}>חדש בHub</span>
     </div>
   );
 };

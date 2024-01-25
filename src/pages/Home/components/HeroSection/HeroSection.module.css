@@ -15,8 +15,7 @@
   top: 0;
   content: '';
   left: 0;
-  background: url('@assets/images/hero.jpg') center/cover;
-
+  background: url('@assets/images/bg_home.png') center/cover;
   z-index: -1;
 }
 
@@ -30,7 +29,7 @@
 .intro {
   display: block;
   font-size: 2rem;
-  font-family: var(--primary-font-600);
+  font-family: var(--primary-font-light-400);
   letter-spacing: 0.38px;
   span {
     display: block;
@@ -46,4 +45,9 @@
   font-size: 3.6rem;
   text-align: center;
   font-family: var(--primary-font-600);
+}
+
+.bold {
+  font-size: 2.6rem;
+  font-family: var(--primary-font-700);
 }

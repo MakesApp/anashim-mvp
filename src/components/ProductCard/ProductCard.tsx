@@ -1,22 +1,25 @@
-import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.css';
 import Ribbon from './components/Ribbon/Ribbon';
 import React from 'react';
-import TagList from './components/TagList/TagList';
-import Quote from './components/Quote/Quote';
-import { Product } from 'src/localTypes/product.types';
-const ProductCard: React.FC<Product> = ({
+import TagList from '../TagList/TagList';
+import Quote from '../Quote/Quote';
+import { ProductCardProps } from './ProductCard.types';
+import getManipulatedTags from '@/utils/getManipulatedTags';
+import { TagProps } from '../Tag/Tag.types';
+import { Link } from 'react-router-dom';
+const ProductCard: React.FC<ProductCardProps> = ({
   logo,
   type,
   sector,
   fields,
   name,
   shortDescription,
+  id,
+  lastAdded,
 }) => {
-  const lastAdded = true;
-  const tags = [...fields, type, sector];
+  const tags: [TagProps[], TagProps[]] = getManipulatedTags({ fields, sector, type });
   return (
-    <Link className={styles.link} to={{ pathname: '/' }}>
+    <Link className={styles.link} to={{ pathname: `/product/${id}` }}>
       <Ribbon />
       <div className={styles.container}>
         <img className={styles.logo} src={logo} alt={logo + ' logo'} loading="lazy" />
@@ -24,9 +27,13 @@ const ProductCard: React.FC<Product> = ({
           <h3 className={styles.companyName}>{name}</h3>
           {lastAdded && <span className={styles.lastAdded}>נוספו לאחרונה</span>}
         </div>
-        <TagList tags={tags} />
-        <Quote text={shortDescription} />
-        <div className={styles.infoBox}>להציג מידע</div>
+        <div className={styles.tagsContainer}>
+          <TagList manipulatedTags={tags} />
+        </div>
+        <div className={styles.quoteContainer}>
+          <Quote text={shortDescription} />
+        </div>
+        <div className={styles.infoBox}>למידע נוסף</div>
       </div>
     </Link>
   );

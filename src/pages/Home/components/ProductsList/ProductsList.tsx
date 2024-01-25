@@ -7,7 +7,7 @@ const ProductsList = () => {
   return (
     <ul className={styles.list}>
       {[...lastFourProducts].map((p) => {
-        return <ProductCard key={p.name} {...p} />;
+        return <ProductCard key={p.name} {...p} lastAdded={true} />;
       })}
     </ul>
   );
