@@ -1,11 +1,7 @@
 import RouteConfiguration from './routes/RouteConfiguration';
 
 function App() {
-  return (
-    <>
-      <RouteConfiguration />
-    </>
-  );
+  return <RouteConfiguration />;
 }
 
 export default App;

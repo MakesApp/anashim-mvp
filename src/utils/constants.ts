@@ -7,50 +7,57 @@ import business from '@assets/icons/business.svg';
 import social from '@assets/icons/social.svg';
 import program from '@assets/icons/program.svg';
 import platform from '@assets/icons/platform.svg';
+import other from '@assets/icons/other.svg';
 
-export const tagsObj = {
-  ציבורי: {
-    group: 'sector',
-    name: 'public',
-    bgColor: 'var(--coral-blush)',
-    icon: publicIcon,
+interface TagIcons {
+  [key: string]: string;
+}
+
+interface TagInfo {
+  bgColor: string;
+  tagIcons: TagIcons;
+}
+
+interface Tags {
+  sector: TagInfo;
+  type: TagInfo;
+  fields: TagInfo;
+}
+
+const SECTOR_TAG_BG = 'var(--coral-blush)';
+const FIELD_TAG_BG = 'var(--midnight-blue)';
+const TYPE_TAG_BG = 'var(--plum-wine)';
+const sectorIcons: TagIcons = {
+  ציבורי: publicIcon,
+  חברתי: social,
+  עסקי: business,
+  אחר: other,
+};
+const fieldIcons: TagIcons = {
+  למידה: learning,
+  חינוך: education,
+  תעסוקה: employment,
+};
+const typeIcons: TagIcons = {
+  מיזם: project,
+  תוכנית: program,
+  פלטפורמה: platform,
+  אחר: other,
+};
+
+export const tags: Tags = {
+  sector: {
+    bgColor: SECTOR_TAG_BG,
+    tagIcons: { ...sectorIcons },
   },
-  חברתי: {
-    group: 'sector',
-    name: 'social',
-    bgColor: 'var(--coral-blush)',
-    icon: social,
+  type: {
+    bgColor: TYPE_TAG_BG,
+    tagIcons: {
+      ...typeIcons,
+    },
   },
-  עסקי: {
-    group: 'sector',
-    name: 'business',
-    bgColor: 'var(--coral-blush)',
-    icon: business,
-  },
-  למידה: {
-    group: 'field',
-    name: 'learning',
-    bgColor: 'var(--midnight-blue)',
-    icon: learning,
-  },
-  חינוך: {
-    group: 'field',
-    name: 'education',
-    bgColor: 'var(--midnight-blue)',
-    icon: education,
-  },
-  תעסוקה: {
-    group: 'field',
-    name: 'employment',
-    bgColor: 'var(--midnight-blue)',
-    icon: employment,
-  },
-  מיזם: { group: 'type', name: 'project', bgColor: 'var(--plum-wine)', icon: project },
-  תוכנית: { group: 'type', name: 'program', bgColor: 'var(--plum-wine)', icon: program },
-  פלטפורמה: {
-    group: 'type',
-    name: 'platform',
-    bgColor: 'var(--plum-wine)',
-    icon: platform,
+  fields: {
+    bgColor: FIELD_TAG_BG,
+    tagIcons: { ...fieldIcons },
   },
 };
