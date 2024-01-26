@@ -1,5 +1,5 @@
 import styles from './SearchFilterBar.module.css';
-import React, { FC, useState, useEffect } from 'react';
+import  { FC, useState, useEffect } from 'react';
 import FilterLayout from '@layouts/FilterLayout/FilterLayout';
 import Accordion from '@components/Accordion/Accordion';
 import { useNavigate } from 'react-router-dom';
