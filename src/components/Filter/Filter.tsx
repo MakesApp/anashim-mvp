@@ -26,6 +26,7 @@ function Filter() {
               <AccordionOption
                 key={option}
                 name={option}
+                title={item.title}
                 isSelected={isSelected}
                 callback={callback}
               />
