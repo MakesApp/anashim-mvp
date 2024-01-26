@@ -1,31 +1,28 @@
-/// <reference types="vite-plugin-svgr/client" />
 import React, { useEffect, useState } from 'react';
+import { FilterMapping } from './SearchProduct.types';
 import { useSearchParams } from 'react-router-dom';
 import ProductCard from '@/components/ProductCard/ProductCard';
 import styles from './searchProduct.module.css';
 import sortProductsByDate from '@/utils/sortProductsByDate';
 import { prodcuts } from '@/data';
 import getManipulatedTags from '@/utils/getManipulatedTags';
-import { TagProps } from '../../components/Tag/Tag.types';
+import filterProducts from './utils/filterProducts';
 import SearchFilterBar from '../Home/components/SearchFilterBar/SearchFilterBar';
-//import from asserts close.svg as react component
-import CloseIcon from '@assets/icons/close.svg?react';
-import Tag from '@/components/Tag/Tag';
+
 import { useNavigate } from 'react-router-dom';
+import QueryDetails from './Components/QueryDetails/QueryDetails';
+import FilterDetails from './Components/FilterDetails/FilterDetails';
 
 const SearchProduct: React.FC = () => {
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
   const [queryForSearchBar, setQueryForSearchBar] = useState<string>('');
   const [filtersForSearchBar, setFiltersForSearchBar] = useState<any>([]);
   const [tags, setTags] = useState<any>([]);
-  // const [filters, setFilters] = useState<any>([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+
   useEffect(() => {
-    interface FilterMapping {
-      [key: string]: string;
-    }
     const filterMapping: FilterMapping = {
       'סוג המוצר': 'type',
       תחום: 'fields',
@@ -50,21 +47,16 @@ const SearchProduct: React.FC = () => {
       }
     });
     setFiltersForSearchBar(filterArrayForSearchBar);
-    console.log({ filters });
+
     if (Object.keys(filters).length > 0) {
       const { fields = [], sector = [], type = [] } = filters;
       console.log({ fields, sector, type });
-      const tagsTuple: [TagProps[], TagProps[]] = getManipulatedTags({
+      const tags = getManipulatedTags({
         fields,
         sector,
         type,
       });
-      console.log({ type });
-      console.log({ fields });
-      console.log({ sector });
-      console.log({ tagsTuple });
-      const combinedTags = [...tagsTuple[0], ...tagsTuple[1]];
-      setTags(combinedTags);
+      setTags(tags);
     }
 
     const updatedFilteredProducts = filterProducts(prodcuts, filters, searchQuery);
@@ -91,36 +83,6 @@ const SearchProduct: React.FC = () => {
     setFiltersForSearchBar(filtersForSearchBar.filter((tag: any) => tag !== tagToRemove));
   };
 
-  const filterProducts = (products: any, filters: any, searchQuery: any) => {
-    return products.filter((product: any) => {
-      for (const [filterType, filterValues] of Object.entries(filters) as any) {
-        if (filterType === 'type' && !filterValues.includes(product.type)) {
-          return false;
-        }
-        if (
-          filterType === 'sector' &&
-          !product.sector.some((sector: any) => filterValues.includes(sector))
-        ) {
-          return false;
-        }
-        if (
-          filterType === 'fields' &&
-          !product.fields.some((field: any) => filterValues.includes(field))
-        ) {
-          return false;
-        }
-      }
-      if (searchQuery?.length) {
-        const nameMatches = product.name.toLowerCase().startsWith(searchQuery);
-        const descriptionMatches = product.shortDescription
-          .toLowerCase()
-          .includes(searchQuery);
-        return descriptionMatches || nameMatches;
-      }
-      return true;
-    });
-  };
-
   return (
     <>
       <div className={styles.filterBackground}>
@@ -130,40 +92,17 @@ const SearchProduct: React.FC = () => {
       </div>
       <div className={styles.container}>
         {searchParams.get('query') && (
-          <div className={styles.searchedContainer}>
-            <span className={styles.searched}>
-              נמצאו {filteredProducts.length} תוצאות עבור
-            </span>
-            <span className={styles.searchQuery}> "{searchParams.get('query')}"</span>
-          </div>
+          <QueryDetails
+            numOfProducts={filteredProducts.length}
+            query={searchParams.get('query')}
+          />
         )}
         {filtersForSearchBar.length > 0 && (
-          <>
-            <div className={styles.filteredSearch}>
-              נמצאו {filteredProducts.length} תוצאות
-            </div>
-            <div className={styles.tagsContainer}>
-              {tags.map((tag: any, i: number) => {
-                console.log({ tag });
-                return (
-                  <Tag
-                    key={i}
-                    isBig={true}
-                    text={tag.text}
-                    icon={tag.icon}
-                    bgColor={tag.bgColor}
-                  >
-                    <button
-                      className={styles.button}
-                      onClick={() => handleRemoveTag(tag.name, tag.text)}
-                    >
-                      <CloseIcon fill={tag.closeColor} />
-                    </button>
-                  </Tag>
-                );
-              })}
-            </div>
-          </>
+          <FilterDetails
+            tags={tags}
+            numOfProducts={filteredProducts.length}
+            handleRemoveTag={handleRemoveTag}
+          />
         )}
       </div>
       <ul className={styles.ul}>

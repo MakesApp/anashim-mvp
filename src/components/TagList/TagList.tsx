@@ -7,14 +7,14 @@ const TagList: React.FC<ITagListProps> = ({ manipulatedTags }) => {
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
-        {typeAndSectors.map((tag) => (
+        {typeAndSectors.map((tag: any) => (
           <li key={tag.text}>
             <Tag icon={tag.icon} text={tag.text} bgColor={tag.bgColor} />
           </li>
         ))}
       </ul>
       <ul className={styles.list}>
-        {fields.map((tag) => (
+        {fields.map((tag: any) => (
           <li key={tag.text}>
             <Tag icon={tag.icon} text={tag.text} bgColor={tag.bgColor} />
           </li>

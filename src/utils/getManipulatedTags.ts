@@ -8,48 +8,28 @@ type Props = {
   type: Type;
 };
 
-export default ({ fields, sector, type }: Props): [TagProps[], TagProps[]] => {
+export default ({ fields, sector, type }: Props): TagProps[] => {
   const mapTagsToObjects = (
     tagCategory: 'sector' | 'fields' | 'type',
-    tagValues: Field[] | Sector[],
+    tagValues: Field[] | Sector[] | Type[],
   ) => {
     return tagValues.map((tagValue) => {
-      const icon = tags[tagCategory].tagIcons[tagValue];
-      const bgColor = tags[tagCategory].bgColor;
-      const closeColor = tags[tagCategory].closeColor;
-      const name = tags[tagCategory].name;
-
+      const tagInfo = tags[tagCategory];
       return {
-        bgColor,
-        icon,
-        text: tagValue,
-        closeColor,
-        name,
+        bgColor: tagInfo.bgColor,
+        icon: tagInfo.tagIcons[tagValue],
+        text: Array.isArray(tagValue) ? tagValue.join(', ') : tagValue,
+        closeColor: tagInfo.closeColor,
+        name: tagInfo.name,
       };
     });
   };
 
-  const firstArray = [
-    ...(type &&
-    tags['type'] &&
-    tags['type'].name &&
-    tags['type'].bgColor &&
-    tags['type'].tagIcons[type] &&
-    tags['type'].closeColor
-      ? [
-          {
-            name: tags['type'].name,
-            bgColor: tags['type'].bgColor,
-            icon: tags['type'].tagIcons[type],
-            text: type[0],
-            closeColor: tags['type'].closeColor,
-          },
-        ]
-      : []),
+  const allTags = [
+    ...(type ? mapTagsToObjects('type', [type]) : []),
     ...mapTagsToObjects('sector', sector),
+    ...mapTagsToObjects('fields', fields),
   ];
 
-  const secondArray = mapTagsToObjects('fields', fields);
-
-  return [firstArray, secondArray];
+  return allTags;
 };

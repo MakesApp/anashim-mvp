@@ -11,7 +11,12 @@ interface AccordionTriggerExtendedProps extends AccordionTriggerProps {
   children: React.ReactNode;
 }
 
-const AccordionDemo: FC<AccordionProps> = ({ title, width, children }) => {
+const AccordionDemo: FC<AccordionProps> = ({
+  title,
+  width,
+
+  children,
+}) => {
   return (
     <Accordion.Root
       style={{ width: `${width}px` }}
