@@ -128,6 +128,7 @@ const SearchProduct: React.FC = () => {
           <SearchFilterBar query={queryForSearchBar} filters={filtersForSearchBar} />
         </div>
       </div>
+      < div className={styles.wrapper}>
       <div className={styles.container}>
         {searchParams.get('query') && (
           <div className={styles.searchedContainer}>
@@ -175,6 +176,7 @@ const SearchProduct: React.FC = () => {
           );
         })}
       </ul>
+    </div>
     </>
   );
 };
