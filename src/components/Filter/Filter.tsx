@@ -24,6 +24,7 @@ function Filter() {
             const isSelected = selected.includes(option);
             return (
               <AccordionOption
+                title={item.title}
                 key={option}
                 name={option}
                 isSelected={isSelected}
