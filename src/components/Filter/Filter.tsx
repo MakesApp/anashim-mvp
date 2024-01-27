@@ -19,7 +19,7 @@ function Filter() {
   return (
     <>
       {accordionItems.map((item) => (
-        <Accordion key={item.title} title={item.title} width={item.width}>
+        <Accordion key={item.title} title={item.title} >
           {item.items.map((option) => {
             const isSelected = selected.includes(option);
             return (
