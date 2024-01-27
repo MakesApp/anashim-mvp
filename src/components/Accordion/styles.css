@@ -10,12 +10,12 @@
   align-self: flex-start;
   position: relative;
   z-index: 9;
+  flex: 1;
 }
 
 .AccordionItem {
   color: var(--charcoal-gray);
   overflow: hidden;
-  margin-top: 1px;
 }
 
 .AccordionItem:first-child {
@@ -50,7 +50,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   line-height: 27.79px;
   text-align: right;
 }
@@ -104,4 +103,11 @@ hr {
   border: none;
   height: 1px;
   background-color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .AccordionTrigger{
+    font-size: 18px;
+    
+  }
 }

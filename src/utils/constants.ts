@@ -58,7 +58,7 @@ export const tags: Tags = {
     tagIcons: { ...sectorIcons },
   },
   type: {
-    name: 'סוג המוצר',
+    name: 'סוג',
     bgColor: TYPE_TAG_BG,
     closeColor: TYPE_TAG_CLOSE,
     tagIcons: {

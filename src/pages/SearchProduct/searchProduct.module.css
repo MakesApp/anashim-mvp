@@ -7,24 +7,24 @@
 
 }
 
-.filterBackground {
+.hero {
   position: relative;
   display: flex;
   justify-content: center;
 }
-.filterBackground::after {
+.hero::after {
   position: absolute;
   width: 100vw;
   height: 100%;
   top: 0;
   content: '';
-  left: -12.5%;
   background: url('@assets/images/bg_search.png');
   z-index: -1;
 }
 
 .searchWrapper {
   display: flex;
+  width: 100%;
   margin: 48px 0px;
   gap: 16px;
 }

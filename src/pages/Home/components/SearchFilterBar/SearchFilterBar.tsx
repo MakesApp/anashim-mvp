@@ -24,7 +24,7 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
   }, [filters, query]);
 
   const rulesForFilters: any = {
-    'סוג המוצר': { maxSelections: 1 },
+    'סוג': { maxSelections: 1 },
     מגזר: { maxSelections: 2 },
   };
 
@@ -68,7 +68,7 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
       <FilterLayout title="חפש לפי סינון">
         <div className={styles.wrapper}>
           {accordionItems.map((item) => (
-            <Accordion key={item.title} title={item.title} width={item.width}>
+            <Accordion key={item.title} title={item.title} >
               {item.options.map((option) => {
                 const filterValue = `${item.title}:${option}`;
 

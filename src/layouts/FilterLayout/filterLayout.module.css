@@ -1,10 +1,10 @@
 .container {
   display: inline-block;
   padding: 30px;
-  padding-bottom: 46px;
+  width: 100%;
+  flex: 1;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.3);
-  height: 160px;
 }
 .title {
   color: var(--white);
@@ -13,4 +13,15 @@
   font-family: var(--primary-font-bold);
   letter-spacing: 0.38px;
   margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .container{
+    padding: 15px;
+    width: 100%;
+    
+  }
+  .title{
+    font-size: 1.8rem
+  }
 }

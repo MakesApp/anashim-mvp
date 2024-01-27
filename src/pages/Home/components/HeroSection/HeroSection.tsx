@@ -3,7 +3,7 @@ import SearchFilterBar from '../SearchFilterBar/SearchFilterBar';
 
 const HeroSection = () => {
   return (
-    <div className={styles.heroSection}>
+    <div className={styles.hero}>
       <div>
         <p className={styles.intro}>
           <span>

@@ -2,11 +2,9 @@
   display: flex;
   gap: 16px;
   position: relative;
-  align-content: center;
+  align-items: center;
 }
 .searchIcon {
-  margin-top: 9px;
-  align-self: flex-start;
 }
 
 .input {
@@ -17,6 +15,21 @@
   color: var(--gray-light);
   font-family: var(--primary-font-600);
   background: var(--white);
-  width: 498px;
   height: 48px;
+  width: 100%;
+}
+
+.input::placeholder{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%; 
+  display: block; 
+}
+
+@media (max-width: 768px) {
+.input::placeholder{
+  font-size: 18px;
+}
+
 }
