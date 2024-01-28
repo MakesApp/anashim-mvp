@@ -29,13 +29,10 @@
   margin-bottom: 48px;
 }
 .intro {
-  display: block;
   font-size: 2rem;
   font-family: var(--primary-font-light-400);
   letter-spacing: 0.38px;
-  span {
-    display: block;
-  }
+
 }
 
 .title {
