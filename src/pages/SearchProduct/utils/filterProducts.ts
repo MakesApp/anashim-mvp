@@ -1,5 +1,10 @@
 const filterProducts = (products: any, filters: any, searchQuery: any) => {
-  return products.filter((product: any) => {
+  const sortedProducts = products.sort((a: any, b: any) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime(); // Descending order
+  });
+  return sortedProducts.filter((product: any) => {
     for (const [filterType, filterValues] of Object.entries(filters) as any) {
       if (filterType === 'type' && !filterValues.includes(product.type)) {
         return false;
