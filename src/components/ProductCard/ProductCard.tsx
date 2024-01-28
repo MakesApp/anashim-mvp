@@ -25,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   //    מגזר: 'sector',
   //  };
   const typeAndSectorTags = allTags.filter(
-    (tag: any) => tag.name === 'סוג המוצר' || tag.name === 'מגזר',
+    (tag: any) => tag.name === 'סוג' || tag.name === 'מגזר',
   );
   const fieldTags = allTags.filter((tag: any) => tag.name === 'תחום');
   const tags = [typeAndSectorTags, fieldTags] as any;

@@ -8,6 +8,9 @@
   align-items: center;
   row-gap: 4%;
 }
+.hero_content{
+  width: 100%;
+}
 .hero::after {
   position: absolute;
   width: 100vw;

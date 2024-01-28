@@ -1,0 +1,22 @@
+
+.noResults{
+    padding-bottom: 7.5%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.noResults_title{
+  font-size: 24px;
+  font-family: var(--primary-font-light-400);
+  margin: 2.4rem 0 1.5rem 0;
+}
+
+.noResults_text{
+    font-family: var(--primary-font-900);
+  font-size: 24px;
+font-weight: unset;
+}

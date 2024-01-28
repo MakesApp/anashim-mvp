@@ -225,7 +225,7 @@ export const prodcuts = [
     name: 'Paths.careers',
     type: 'פלטפורמה',
     sector: ['עסקי'],
-    fields: ['עסקי', 'תעסוקה'],
+    fields: [ 'תעסוקה'],
     phone: '',
     email: '',
     shortDescription: 'שירות מקוון לאיתור מסלולי קריירה',

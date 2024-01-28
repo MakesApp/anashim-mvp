@@ -1,8 +1,14 @@
+.main_container{
+  display: flex;
+  flex-direction: column;
+}
 .wrapper {
+  flex: 1;
   padding-bottom: 12.5%;
 }
 .container {
   padding: 3% 0;
+
 }
 
 .hero {
@@ -47,20 +53,6 @@
   font-size: 24px;
   letter-spacing: 0.38px;
 }
-
-.noResults > h2 {
-  color: var(--charcoal-gray);
-  font-size: 24px;
-  font-family: var(--primary-font-900);
-  font-weight: 400;
-  letter-spacing: 0.38px;
-  margin-bottom: 10px;
-}
-.noResults > p {
-  color: var(--charcoal-gray);
-  font-size: 16px;
-  font-family: var(--primary-font-400);
-  font-weight: 400;
-  letter-spacing: 0.38px;
-  margin-bottom: 24px;
+.noResults_page{
+    padding:  4% 0 12.5% 0;
 }
