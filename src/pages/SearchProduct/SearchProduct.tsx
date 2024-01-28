@@ -24,7 +24,7 @@ const SearchProduct: React.FC = () => {
 
   useEffect(() => {
     const filterMapping: FilterMapping = {
-      'סוג': 'type',
+      סוג: 'type',
       תחום: 'fields',
       מגזר: 'sector',
     };
@@ -49,13 +49,12 @@ const SearchProduct: React.FC = () => {
     setFiltersForSearchBar(filterArrayForSearchBar);
 
     if (Object.keys(filters).length > 0) {
-      const { fields = [], sector = [], type = [] } = filters;
-      console.log({ fields, sector, type });
       const tags = getManipulatedTags({
-        fields,
-        sector,
-        type,
+        fields: filters?.fields,
+        sector: filters?.sector,
+        type: filters.type,
       });
+
       setTags(tags);
     }
 
@@ -65,7 +64,6 @@ const SearchProduct: React.FC = () => {
   }, [searchParams]);
 
   const handleRemoveTag = (key: string, value: string) => {
-    console.log({ key, value });
     const newSearchParams = new URLSearchParams();
 
     // Rebuilding the search parameters excluding the one to be removed
@@ -90,32 +88,38 @@ const SearchProduct: React.FC = () => {
           <SearchFilterBar query={queryForSearchBar} filters={filtersForSearchBar} />
         </div>
       </div>
-      < div className={styles.wrapper}>
-      <div className={styles.container}>
-        {searchParams.get('query') && (
-          <QueryDetails
-            numOfProducts={filteredProducts.length}
-            query={searchParams.get('query')}
-          />
-        )}
-        {filtersForSearchBar.length > 0 && (
-          <FilterDetails
-            tags={tags}
-            numOfProducts={filteredProducts.length}
-            handleRemoveTag={handleRemoveTag}
-          />
-        )}
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
+          {searchParams.get('query') && filteredProducts.length > 0 && (
+            <QueryDetails
+              numOfProducts={filteredProducts.length}
+              query={searchParams.get('query')}
+            />
+          )}
+          {filtersForSearchBar.length > 0 && filteredProducts.length > 0 && (
+            <FilterDetails
+              tags={tags}
+              numOfProducts={filteredProducts.length}
+              handleRemoveTag={handleRemoveTag}
+            />
+          )}
+          {filteredProducts.length === 0 && (
+            <div className={styles.noResults}>
+              <h2>לא נמצאו תוצאות חיפוש</h2>
+              <p>נסה לחפש שוב או שאולי הדברים הבאים יעניינו אותך</p>
+            </div>
+          )}
+        </div>
+        <ul className={styles.ul}>
+          {filteredProducts.map((product: any) => {
+            return (
+              <li key={product.name} className={styles.li}>
+                <ProductCard {...product} />
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <ul className={styles.ul}>
-        {filteredProducts.map((product: any) => {
-          return (
-            <li key={product.name} className={styles.li}>
-              <ProductCard {...product} />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
     </>
   );
 };

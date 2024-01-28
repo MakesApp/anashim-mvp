@@ -2,7 +2,8 @@ const filterProducts = (products: any, filters: any, searchQuery: any) => {
   const sortedProducts = products.sort((a: any, b: any) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
-    return dateB.getTime() - dateA.getTime(); // Descending order
+
+    return dateB.getTime() - dateA.getTime();
   });
   return sortedProducts.filter((product: any) => {
     for (const [filterType, filterValues] of Object.entries(filters) as any) {

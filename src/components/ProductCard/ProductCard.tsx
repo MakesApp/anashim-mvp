@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   lastAdded,
 }) => {
   const allTags = getManipulatedTags({ fields, sector, type });
-  console.log({ allTags });
+
   //  const filterMapping: FilterMapping = {
   //    'סוג המוצר': 'type',
   //    תחום: 'fields',
@@ -29,11 +29,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
   );
   const fieldTags = allTags.filter((tag: any) => tag.name === 'תחום');
   const tags = [typeAndSectorTags, fieldTags] as any;
-  console.log({ tags });
 
   return (
     <Link className={styles.link} to={{ pathname: `/product/${id}` }}>
-      <Ribbon />
+      {lastAdded && <Ribbon />}
       <div className={styles.container}>
         <img className={styles.logo} src={logo} alt={logo + ' logo'} loading="lazy" />
         <div className={styles.textContainer}>

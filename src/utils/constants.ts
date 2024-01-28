@@ -36,12 +36,12 @@ const sectorIcons: TagIcons = {
   ציבורי: publicIcon,
   חברתי: social,
   עסקי: business,
-  אחר: other,
 };
 const fieldIcons: TagIcons = {
   למידה: learning,
   חינוך: education,
   תעסוקה: employment,
+  אחר: other,
 };
 const typeIcons: TagIcons = {
   מיזם: project,

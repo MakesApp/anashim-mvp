@@ -3,9 +3,9 @@ import { tags } from './constants';
 import { Field, Sector, Type } from './enum';
 
 type Props = {
-  fields: Field[];
-  sector: Sector[];
-  type: Type;
+  fields: Field[] | undefined;
+  sector: Sector[] | undefined;
+  type: Type | undefined;
 };
 
 export default ({ fields, sector, type }: Props): TagProps[] => {
@@ -24,12 +24,17 @@ export default ({ fields, sector, type }: Props): TagProps[] => {
       };
     });
   };
+  let allTags = [] as any;
 
-  const allTags = [
-    ...(type ? mapTagsToObjects('type', [type]) : []),
-    ...mapTagsToObjects('sector', sector),
-    ...mapTagsToObjects('fields', fields),
-  ];
+  if (type) {
+    allTags = [...allTags, ...mapTagsToObjects('type', [type])];
+  }
+  if (sector) {
+    allTags = [...allTags, ...mapTagsToObjects('sector', sector)];
+  }
+  if (fields) {
+    allTags = [...allTags, ...mapTagsToObjects('fields', fields)];
+  }
 
   return allTags;
 };
