@@ -1,10 +1,8 @@
-.wrapper{
+.wrapper {
   padding-bottom: 12.5%;
-
 }
-.container{
+.container {
   padding: 3% 0;
-
 }
 
 .hero {
@@ -36,7 +34,7 @@
   row-gap: 5rem;
 }
 .li {
-   flex: 1;
+  flex: 1;
   width: 100%;
   max-width: 300px;
   flex-basis: 275px;
@@ -49,43 +47,20 @@
   font-size: 24px;
   letter-spacing: 0.38px;
 }
-.searchedContainer {
-  display: flex;
-  align-items: center;
-}
 
-.searched {
+.noResults > h2 {
+  color: var(--charcoal-gray);
   font-size: 24px;
-  font-family: var(--primary-font-400);
+  font-family: var(--primary-font-900);
   font-weight: 400;
   letter-spacing: 0.38px;
+  margin-bottom: 10px;
 }
-
-.searchQuery {
-  font-size: 24px;
+.noResults > p {
   color: var(--charcoal-gray);
-  font-family: var(--primary-font-900);
-  font-weight: 900;
-  letter-spacing: 0.38px;
-  margin-top: -6px;
-  margin-right: 5px;
-}
-
-.filteredSearch {
-  color: var(--charcoal-gray);
-  font-size: 24px;
+  font-size: 16px;
   font-family: var(--primary-font-400);
   font-weight: 400;
   letter-spacing: 0.38px;
   margin-bottom: 24px;
-}
-
-.tagsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.button {
-  margin-left: 8px;
 }

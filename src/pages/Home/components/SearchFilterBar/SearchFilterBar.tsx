@@ -2,21 +2,21 @@ import styles from './SearchFilterBar.module.css';
 import  { FC, useState, useEffect } from 'react';
 import FilterLayout from '@layouts/FilterLayout/FilterLayout';
 import Accordion from '@components/Accordion/Accordion';
+import SearchButton from './Components/SearchButton/SearchButton';
 import { useNavigate } from 'react-router-dom';
 import AccordionOption from '@components/AccordionOption/AccordionOption';
 import { SearchFilterBarProps } from './SearchFilterBar.types';
-import searchIcon from '@assets/icons/search.svg';
 import { accordionItems } from './constants';
 
 const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
-  const [selected, setSelected] = useState<string[]>([]);
+  const [filtersSelected, setFiltersSelected] = useState<string[]>([]);
 
   const [search, setSearch] = useState<string>('');
   const navigate = useNavigate();
 
   useEffect(() => {
     if (filters) {
-      setSelected(filters);
+      setFiltersSelected(filters);
     }
     if (query) {
       setSearch(query);
@@ -27,29 +27,23 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
     'סוג': { maxSelections: 1 },
     מגזר: { maxSelections: 2 },
   };
-
-  const callback = (title: string, name: string) => {
+  const handleFilterChange = (title: string, name: string) => {
     const filterKey = `${title}:${name}`;
     const rule = rulesForFilters[title];
-    if (rule) {
-      const { maxSelections } = rule;
-      const currentSelections = selected.filter((item) => item.startsWith(`${title}:`));
-      if (selected.includes(filterKey)) {
-        setSelected(selected.filter((item) => item !== filterKey));
-      } else if (currentSelections.length < maxSelections) {
-        setSelected([...selected, filterKey]);
-      }
-    } else {
-      if (selected.includes(filterKey)) {
-        setSelected(selected.filter((item) => item !== filterKey));
-      } else {
-        setSelected([...selected, filterKey]);
-      }
+    const maxSelections = rule?.maxSelections ?? Infinity;
+    const currentSelections = filtersSelected.filter((item) =>
+      item.startsWith(`${title}:`),
+    );
+
+    if (filtersSelected.includes(filterKey)) {
+      setFiltersSelected(filtersSelected.filter((item) => item !== filterKey));
+    } else if (currentSelections.length < maxSelections) {
+      setFiltersSelected((prev) => [...prev, filterKey]);
     }
   };
 
   const searchByFilter = () => {
-    const queryParams = selected
+    const queryParams = filtersSelected
       .map((filter) => {
         const [title, name] = filter.split(':');
         return `${title}=${encodeURIComponent(name)}`;
@@ -72,22 +66,20 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
               {item.options.map((option) => {
                 const filterValue = `${item.title}:${option}`;
 
-                const isSelected = selected.includes(filterValue);
+                const isSelected = filtersSelected.includes(filterValue);
                 return (
                   <AccordionOption
                     key={option}
                     name={option}
                     title={item.title}
                     isSelected={isSelected}
-                    callback={callback}
+                    callback={handleFilterChange}
                   />
                 );
               })}
             </Accordion>
           ))}
-          <button onClick={searchByFilter} className={styles.searchIcon}>
-            <img src={searchIcon} alt="search" />
-          </button>
+          <SearchButton callback={searchByFilter} />
         </div>
       </FilterLayout>
 
@@ -100,9 +92,7 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
             className={styles.input}
             placeholder="חפש לפי שם מוצר, או תיאור"
           />
-          <button onClick={searchByInput}>
-            <img src={searchIcon} alt="search" />
-          </button>
+          <SearchButton callback={searchByInput} />
         </div>
       </FilterLayout>
     </>

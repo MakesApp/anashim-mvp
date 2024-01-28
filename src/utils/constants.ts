@@ -13,14 +13,14 @@ interface TagIcons {
   [key: string]: string;
 }
 
-interface TagInfo {
+export interface TagInfo {
   name: string;
   bgColor: string;
   closeColor: string;
   tagIcons: TagIcons;
 }
 
-interface Tags {
+export interface Tags {
   sector: TagInfo;
   type: TagInfo;
   fields: TagInfo;
@@ -36,12 +36,12 @@ const sectorIcons: TagIcons = {
   ציבורי: publicIcon,
   חברתי: social,
   עסקי: business,
-  אחר: other,
 };
 const fieldIcons: TagIcons = {
   למידה: learning,
   חינוך: education,
   תעסוקה: employment,
+  אחר: other,
 };
 const typeIcons: TagIcons = {
   מיזם: project,
