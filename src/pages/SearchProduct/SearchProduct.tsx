@@ -4,16 +4,19 @@ import { useSearchParams } from 'react-router-dom';
 import ProductCard from '@/components/ProductCard/ProductCard';
 import styles from './searchProduct.module.css';
 import sortProductsByDate from '@/utils/sortProductsByDate';
-import { prodcuts } from '@/data';
+import { articles, prodcuts } from '@/data';
 import getManipulatedTags from '@/utils/getManipulatedTags';
 import filterProducts from './utils/filterProducts';
 import SearchFilterBar from '../Home/components/SearchFilterBar/SearchFilterBar';
-
 import { useNavigate } from 'react-router-dom';
 import QueryDetails from './Components/QueryDetails/QueryDetails';
 import FilterDetails from './Components/FilterDetails/FilterDetails';
+import NoResults from './Components/NoResult/NoResults';
+import ProductsList from '../Home/components/ProductsList/ProductsList';
+import ArticleSection from '@/components/ArticleSection/ArticleSection';
 
 const SearchProduct: React.FC = () => {
+  const article=articles[0]
   const [queryForSearchBar, setQueryForSearchBar] = useState<string>('');
   const [filtersForSearchBar, setFiltersForSearchBar] = useState<any>([]);
   const [tags, setTags] = useState<any>([]);
@@ -82,12 +85,13 @@ const SearchProduct: React.FC = () => {
   };
 
   return (
-    <>
+    <div className={styles.main_container}>
       <div className={styles.hero}>
         <div className={styles.searchWrapper}>
           <SearchFilterBar query={queryForSearchBar} filters={filtersForSearchBar} />
         </div>
       </div>
+      {filteredProducts.length?
       <div className={styles.wrapper}>
         <div className={styles.container}>
           {searchParams.get('query') && filteredProducts.length > 0 && (
@@ -103,12 +107,7 @@ const SearchProduct: React.FC = () => {
               handleRemoveTag={handleRemoveTag}
             />
           )}
-          {filteredProducts.length === 0 && (
-            <div className={styles.noResults}>
-              <h2>לא נמצאו תוצאות חיפוש</h2>
-              <p>נסה לחפש שוב או שאולי הדברים הבאים יעניינו אותך</p>
-            </div>
-          )}
+  
         </div>
         <ul className={styles.ul}>
           {filteredProducts.map((product: any) => {
@@ -120,7 +119,15 @@ const SearchProduct: React.FC = () => {
           })}
         </ul>
       </div>
-    </>
+:      (
+  <div className={styles.noResults_page}>
+          <NoResults/>
+          <ProductsList/>
+            <ArticleSection article={article}/>
+          </div>
+          )
+}
+    </div>
   );
 };
 

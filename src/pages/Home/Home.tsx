@@ -1,5 +1,6 @@
-import Article from '@components/Article/Article';
+import ArticleSection from '@/components/ArticleSection/ArticleSection';
 import styles from './Home.module.css';
+
 
 import HeroSection from './components/HeroSection/HeroSection';
 import ProductsList from './components/ProductsList/ProductsList';
@@ -13,12 +14,7 @@ const Home = () => {
         <section className={styles.listContainer}>
           <ProductsList />
         </section>
-        <section>
-          <h2 className={styles.articleSectionTitle}>חדשות חמות מהתעשייה</h2>
-          <div className={styles.articleContainer}>
-            <Article {...article} />
-          </div>
-        </section>
+        <ArticleSection article={article}/>
       </main>
     </div>
   );

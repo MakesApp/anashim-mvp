@@ -18,7 +18,13 @@ const Card: React.FC<Product> = ({
   description,
   type,
 }) => {
-  const tags = getManipulatedTags({ fields, sector, type });
+ const allTags = getManipulatedTags({ fields, sector, type });
+
+  const typeAndSectorTags = allTags.filter(
+    (tag: any) => tag.name === 'סוג' || tag.name === 'מגזר',
+  );
+  const fieldTags = allTags.filter((tag: any) => tag.name === 'תחום');
+  const tags = [typeAndSectorTags, fieldTags] as any;
   return (
     <div className={styles.container}>
       <div className={styles.rightSide}>

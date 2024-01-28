@@ -4,7 +4,6 @@ import { TagProps } from './Tag.types';
 const Tag: React.FC<TagProps> = ({ isBig, text, icon, bgColor, children }) => {
   const fontStyle = isBig ? { fontSize: '15px' } : undefined;
   const iconStyle = isBig ? { width: '13px', height: '13px' } : undefined;
-
   return (
     <div className={styles.container} style={{ background: bgColor }}>
       {children}

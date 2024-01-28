@@ -1,6 +1,4 @@
 .container {
-  width: 50%;
-  max-width: 600px;
 }
 .article {
   display: flex;
