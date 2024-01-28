@@ -1,5 +1,5 @@
 import anashimInnovationHub from '@assets/icons/anashimInnovationHub.svg';
-import anashimInnovationHubMobile from '@assets/mobile/anashimHub.svg';
+import anashimInnovationHubMobile from '@assets/mobile/icons/anashimHub.svg';
 import anashimIL from '@assets/icons/anashimIL.svg';
 import anashimILMobile from '@assets/mobile/icons/anashimIL.svg';
 import styles from './Header.module.css';
