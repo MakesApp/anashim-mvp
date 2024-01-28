@@ -70,4 +70,8 @@
   .searchBarContainer {
     flex-direction: column;
   }
+  .hero{
+      padding: 10% 0 10% 0;
+
+  }
 }
