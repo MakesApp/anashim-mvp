@@ -5,6 +5,8 @@
   align-items: center;
 }
 .searchIcon {
+  margin-top: 1rem;
+  align-self: flex-start;
 }
 
 .input {
