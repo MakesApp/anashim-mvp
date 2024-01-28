@@ -24,7 +24,7 @@ const SearchProduct: React.FC = () => {
 
   useEffect(() => {
     const filterMapping: FilterMapping = {
-      'סוג המוצר': 'type',
+      'סוג': 'type',
       תחום: 'fields',
       מגזר: 'sector',
     };
@@ -85,11 +85,12 @@ const SearchProduct: React.FC = () => {
 
   return (
     <>
-      <div className={styles.filterBackground}>
+      <div className={styles.hero}>
         <div className={styles.searchWrapper}>
           <SearchFilterBar query={queryForSearchBar} filters={filtersForSearchBar} />
         </div>
       </div>
+      < div className={styles.wrapper}>
       <div className={styles.container}>
         {searchParams.get('query') && (
           <QueryDetails
@@ -114,6 +115,7 @@ const SearchProduct: React.FC = () => {
           );
         })}
       </ul>
+    </div>
     </>
   );
 };

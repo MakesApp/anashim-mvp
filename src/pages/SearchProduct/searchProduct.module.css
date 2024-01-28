@@ -1,27 +1,30 @@
-.container {
-  padding: 0 4%;
-  margin-bottom: 51px;
-  margin-top: 10px;
+.wrapper{
+  padding-bottom: 12.5%;
+
+}
+.container{
+  padding: 3% 0;
+
 }
 
-.filterBackground {
+.hero {
   position: relative;
   display: flex;
   justify-content: center;
 }
-.filterBackground::after {
+.hero::after {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   top: 0;
   content: '';
-  left: 0;
   background: url('@assets/images/bg_search.png');
   z-index: -1;
 }
 
 .searchWrapper {
   display: flex;
+  width: 100%;
   margin: 48px 0px;
   gap: 16px;
 }
@@ -30,11 +33,13 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
-  row-gap: 1.5rem;
-  justify-content: center;
+  row-gap: 5rem;
 }
 .li {
-  margin-bottom: 36px;
+   flex: 1;
+  width: 100%;
+  max-width: 300px;
+  flex-basis: 275px;
 }
 
 .resultNumber {

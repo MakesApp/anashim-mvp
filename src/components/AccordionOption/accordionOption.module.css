@@ -1,8 +1,7 @@
 .accordionOption__container {
   display: flex;
   align-content: center;
-  gap: 6px;
-  margin-bottom: 14px;
+  width: 100%;
 }
 .accordionOption__container:last-child {
   margin-bottom: 0;

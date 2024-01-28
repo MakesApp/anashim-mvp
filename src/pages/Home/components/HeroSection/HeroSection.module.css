@@ -1,4 +1,4 @@
-.heroSection {
+.hero {
   position: relative;
   color: #fff;
   padding: 4% 0 10% 0;
@@ -8,13 +8,12 @@
   align-items: center;
   row-gap: 4%;
 }
-.heroSection::after {
+.hero::after {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   top: 0;
   content: '';
-  left: 0;
   background: url('@assets/images/bg_home.png') center/cover;
   z-index: -1;
 }
@@ -37,8 +36,9 @@
 }
 
 .title {
-  font-size: 6rem;
+  font-size: 5.5rem;
   font-family: var(--primary-font-700);
+  white-space: pre-line;
 }
 
 .subTitle {
@@ -50,4 +50,28 @@
 .bold {
   font-size: 2.6rem;
   font-family: var(--primary-font-700);
+}
+
+@media (max-width: 768px) {
+  .bold,.intro{
+      font-family: var(--primary-font-light-400);
+      font-size: 1.4rem;
+
+  }
+  .hero::after{
+    left: -2.5%;
+  }
+  .title{
+    font-size: 2.4rem;
+  }
+  .subTitle{
+    display: none;
+  }
+  .searchBarContainer {
+    flex-direction: column;
+  }
+  .hero{
+      padding: 10% 0 10% 0;
+
+  }
 }

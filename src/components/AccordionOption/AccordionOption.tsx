@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import  { FC } from 'react';
 import styles from './accordionOption.module.css';
 import circle from '@assets/icons/circle.svg';
 import circleFill from '@assets/icons/circle-filled.svg';

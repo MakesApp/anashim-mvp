@@ -1,5 +1,6 @@
 .link {
   position: relative;
+
 }
 .container {
   height: 100%;
@@ -9,11 +10,12 @@
   display: flex;
   flex-direction: column;
   border: 1px solid #dfdfdf;
-  width: 300px;
 }
 
 .logo {
   height: 10rem;
+  width: 100%;
+  display: block;
   object-fit: contain;
 }
 
