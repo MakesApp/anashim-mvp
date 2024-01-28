@@ -5,7 +5,7 @@ import AccordionOption from '@components/AccordionOption/AccordionOption';
 function Filter() {
   const [selected, setSelected] = React.useState<string[]>([]);
   const accordionItems = [
-    { title: 'סוג המוצר', width: '202', items: ['למידה', 'חינוך', 'התעסוקה'] },
+    { title: 'סוג', width: '202', items: ['למידה', 'חינוך', 'התעסוקה'] },
   ];
 
   const callback = (name: string) => {
@@ -19,7 +19,7 @@ function Filter() {
   return (
     <>
       {accordionItems.map((item) => (
-        <Accordion key={item.title} title={item.title} width={item.width}>
+        <Accordion key={item.title} title={item.title} >
           {item.items.map((option) => {
             const isSelected = selected.includes(option);
             return (

@@ -3,5 +3,11 @@
 }
 
 .container{
-    padding: 0 10%;
+    margin: 0 10%;
+}
+@media (max-width: 768px) {
+  .container{
+    margin: 0 2.5%;
+    
+  }
 }

@@ -27,7 +27,7 @@ const SearchProduct: React.FC = () => {
       [key: string]: string;
     }
     const filterMapping: FilterMapping = {
-      'סוג המוצר': 'type',
+      'סוג': 'type',
       תחום: 'fields',
       מגזר: 'sector',
     };
@@ -123,7 +123,7 @@ const SearchProduct: React.FC = () => {
 
   return (
     <>
-      <div className={styles.filterBackground}>
+      <div className={styles.hero}>
         <div className={styles.searchWrapper}>
           <SearchFilterBar query={queryForSearchBar} filters={filtersForSearchBar} />
         </div>
