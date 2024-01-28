@@ -6,10 +6,10 @@ const HeroSection = () => {
     <div className={styles.hero}>
       <div className={styles.hero_content}>
         <p className={styles.intro}>
-          <span>
+          <div>
             הבית שמאגד את כל המיזמים, היוזמות והכלים החדשניים העוסקים בפיתוח ההון האנושי,
-          </span>
-          <span className={styles.bold}>בתחומי החינוך, הלמידה והעבודה</span>
+          </div>
+          <div className={styles.bold}>בתחומי החינוך, הלמידה והעבודה</div>
         </p>
 
         <div>

@@ -7,7 +7,7 @@
   padding: calc(1.5% + 10rem) 0 8.5% 0;
 }
 .bgImg {
-  top: 0;
+  top: -10px;
   height: 0;
   position: absolute;
   width: 100vw;
