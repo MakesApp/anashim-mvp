@@ -106,7 +106,7 @@ const SearchProduct: React.FC = () => {
           {filteredProducts.length === 0 && (
             <div className={styles.noResults}>
               <h2>לא נמצאו תוצאות חיפוש</h2>
-              <p>נסה לחפש שוב או שאולי הדברים הבאים יעניינו אותך</p>
+              <p>נסה לחפש שוב לפי סינון אחר או הנחיה שונה</p>
             </div>
           )}
         </div>

@@ -11,18 +11,18 @@
   color: var(--white);
   text-align: right;
   font-size: 30px;
-  font-family: var(--primary-font-bold);
+  font-family: var(--primary-font-700);
   letter-spacing: 0.38px;
   margin-bottom: 16px;
 }
 
 @media (max-width: 768px) {
-  .container{
+  .container {
     width: 100%;
     padding: 5%;
     height: 90px;
   }
-  .title{
-    font-size: 1.8rem
+  .title {
+    font-size: 1.8rem;
   }
 }
