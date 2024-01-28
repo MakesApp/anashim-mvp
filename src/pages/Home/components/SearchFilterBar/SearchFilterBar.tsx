@@ -101,7 +101,7 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
             value={search}
             type="text"
             className={styles.input}
-            placeholder="חפש לפי שם מוצר, או תיאור"
+            placeholder="חפש לפי שם או תיאור"
           />
           <SearchButton callback={searchByInput} />
         </div>
