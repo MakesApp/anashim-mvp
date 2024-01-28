@@ -11,11 +11,18 @@ interface AccordionTriggerExtendedProps extends AccordionTriggerProps {
   children: React.ReactNode;
 }
 
-const AccordionDemo: FC<AccordionProps> = ({ title, children }) => {
+const AccordionContainer: FC<AccordionProps> = ({
+  title,
+  openItem,
+  handleAccordionChange,
+  children,
+}) => {
   return (
     <Accordion.Root
       className="AccordionRoot"
       type="single"
+      value={openItem}
+      onValueChange={handleAccordionChange}
       collapsible
     >
       <Accordion.Item className="AccordionItem" value={title}>
@@ -63,4 +70,4 @@ const AccordionContent = React.forwardRef<HTMLDivElement, AccordionContentProps>
   ),
 );
 
-export default AccordionDemo;
+export default AccordionContainer;

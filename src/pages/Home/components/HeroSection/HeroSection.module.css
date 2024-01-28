@@ -15,7 +15,7 @@
   position: absolute;
   width: 100vw;
   height: 100%;
-  top: 0;
+  top: -10px;
   content: '';
   background: url('@assets/images/bg_home.png') center/cover;
   z-index: -1;
@@ -56,25 +56,24 @@
 }
 
 @media (max-width: 768px) {
-  .bold,.intro{
-      font-family: var(--primary-font-light-400);
-      font-size: 1.4rem;
-
+  .bold,
+  .intro {
+    font-family: var(--primary-font-light-400);
+    font-size: 1.4rem;
   }
-  .hero::after{
+  .hero::after {
     left: -2.5%;
   }
-  .title{
+  .title {
     font-size: 2.4rem;
   }
-  .subTitle{
+  .subTitle {
     display: none;
   }
   .searchBarContainer {
     flex-direction: column;
   }
-  .hero{
-      padding: 10% 0 10% 0;
-
+  .hero {
+    padding: 10% 0 10% 0;
   }
 }

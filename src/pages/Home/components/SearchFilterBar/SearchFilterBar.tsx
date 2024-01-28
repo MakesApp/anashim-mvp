@@ -1,5 +1,5 @@
 import styles from './SearchFilterBar.module.css';
-import  { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import FilterLayout from '@layouts/FilterLayout/FilterLayout';
 import Accordion from '@components/Accordion/Accordion';
 import SearchButton from './Components/SearchButton/SearchButton';
@@ -10,8 +10,9 @@ import { accordionItems } from './constants';
 
 const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
   const [filtersSelected, setFiltersSelected] = useState<string[]>([]);
-
+  const [openItem, setOpenItem] = useState<string | null>(null);
   const [search, setSearch] = useState<string>('');
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,8 +24,12 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
     }
   }, [filters, query]);
 
+  const handleAccordionChange = (itemValue: string) => {
+    setOpenItem(openItem === itemValue ? null : itemValue);
+  };
+
   const rulesForFilters: any = {
-    'סוג': { maxSelections: 1 },
+    סוג: { maxSelections: 1 },
     מגזר: { maxSelections: 2 },
   };
   const handleFilterChange = (title: string, name: string) => {
@@ -43,6 +48,7 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
   };
 
   const searchByFilter = () => {
+    setOpenItem(null);
     const queryParams = filtersSelected
       .map((filter) => {
         const [title, name] = filter.split(':');
@@ -62,7 +68,12 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
       <FilterLayout title="חפש לפי סינון">
         <div className={styles.wrapper}>
           {accordionItems.map((item) => (
-            <Accordion key={item.title} title={item.title} >
+            <Accordion
+              openItem={openItem}
+              handleAccordionChange={handleAccordionChange}
+              key={item.title}
+              title={item.title}
+            >
               {item.options.map((option) => {
                 const filterValue = `${item.title}:${option}`;
 
@@ -90,7 +101,7 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
             value={search}
             type="text"
             className={styles.input}
-            placeholder="חפש לפי שם מוצר, או תיאור"
+            placeholder="חפש לפי שם או תיאור"
           />
           <SearchButton callback={searchByInput} />
         </div>

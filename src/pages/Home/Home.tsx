@@ -8,7 +8,7 @@ import { articles } from '@/data';
 const article = articles[0];
 const Home = () => {
   return (
-    <div>
+    <>
       <main className={styles.home}>
         <HeroSection />
         <section className={styles.listContainer}>
@@ -16,7 +16,7 @@ const Home = () => {
         </section>
         <ArticleSection article={article}/>
       </main>
-    </div>
+    </>
   );
 };
 

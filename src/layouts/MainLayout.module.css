@@ -1,5 +1,6 @@
-.content{
-    flex: 1;
+.content {
+  flex: 1;
+  padding: 0 10%;
 }
 
 .container{
@@ -9,8 +10,7 @@
     flex-direction: column;
 }
 @media (max-width: 768px) {
-  .container{
-    margin: 0 2.5%;
-    
+  .container {
+    padding: 0 2.5%;
   }
 }
