@@ -40,7 +40,7 @@ const sectorIcons: TagIcons = {
 const fieldIcons: TagIcons = {
   למידה: learning,
   חינוך: education,
-  התעסוקה: employment,
+  תעסוקה: employment,
   אחר: other,
 };
 const typeIcons: TagIcons = {
