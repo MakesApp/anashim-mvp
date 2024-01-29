@@ -13,6 +13,7 @@ const JoinHub = () => {
         <a
           href="https://forms.monday.com/forms/3e6f28898015233ba02e315eec82385f?r=use1"
           target="_blank"
+          rel="noreferrer"
           className={styles.bottom_link}
         >
           להצטרפות

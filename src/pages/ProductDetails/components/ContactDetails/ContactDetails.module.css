@@ -59,6 +59,7 @@
   margin-right: 3.5rem;
   color: #fff;
   display: block;
-  font-weight: 700;
-  line-height: 16px;
+  font-weight: 500;
+  line-height: 16px; /* 80% */
+  letter-spacing: 0.066px;
 }
