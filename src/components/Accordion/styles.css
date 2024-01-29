@@ -52,6 +52,7 @@
   justify-content: space-between;
   line-height: 27.79px;
   text-align: right;
+  font-weight: 400;
 }
 
 .AccordionContent {
