@@ -20,9 +20,10 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.linksContainer}>
-         {phone&& <div className={styles.detail}>
+        {phone && (
+          <div className={styles.detail}>
             <img
-              className={`${styles.icon} ${showDetails ? '' : styles.lowOpacity}`}
+              className={`${styles.icon} ${styles.phone} ${showDetails ? '' : styles.lowOpacity}`}
               src={telIcon}
               alt="phone"
               loading="lazy"
@@ -30,8 +31,10 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
               {phone}
             </span>
-          </div>}
-          {email&&<a href={`mailto:${email}`} className={styles.detail} target="_blank">
+          </div>
+        )}
+        {email && (
+          <a href={`mailto:${email}`} className={styles.detail} target="_blank">
             <img
               className={`${styles.icon} ${showDetails ? '' : styles.lowOpacity}`}
               src={emailIcon}
@@ -41,8 +44,10 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
               {email}
             </span>
-          </a>}
-         {link&& <a href={link} target="_blank" className={styles.detail}>
+          </a>
+        )}
+        {link && (
+          <a href={link} target="_blank" className={styles.detail}>
             <img
               className={`${styles.icon} ${showDetails ? '' : styles.lowOpacity}`}
               src={webIcon}
@@ -50,7 +55,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
               loading="lazy"
             />
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
-           <span>   {link}</span>
+              <span> {link}</span>
               <img
                 src={linkIcon}
                 alt="link icon"
@@ -58,8 +63,10 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
                 className={`${showDetails ? '' : styles.hidden}`}
               />
             </span>
-          </a>}
-       {linkedIn&&   <a href={linkedIn} target="_blank" className={styles.detail}>
+          </a>
+        )}
+        {linkedIn && (
+          <a href={linkedIn} target="_blank" className={styles.detail}>
             <img
               className={`${styles.icon} ${showDetails ? '' : styles.lowOpacity}`}
               src={linkedinIcon}
@@ -67,20 +74,17 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
               loading="lazy"
             />
             <span className={`${styles.name}  ${showDetails ? '' : styles.hidden}`}>
-                 <span>
-              {linkedIn}
-              </span>
+              <span>{linkedIn}</span>
               <img
                 className={`${showDetails ? '' : styles.hidden}`}
                 src={linkIcon}
                 alt="link icon"
                 loading="lazy"
               />
-           
             </span>
           </a>
-          }
-        </div>
+        )}
+      </div>
       {!showDetails && (
         <button onClick={toggleDetailsBtn} className={styles.button}>
           להציג פרטי התקשרות

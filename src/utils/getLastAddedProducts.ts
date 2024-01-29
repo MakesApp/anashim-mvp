@@ -1,7 +1,7 @@
 import { prodcuts } from '../data';
 
 export default function () {
-  return [prodcuts[8], prodcuts[11], prodcuts[19], prodcuts[27]];
+  return [prodcuts[27], prodcuts[19], prodcuts[1], prodcuts[13]];
 }
 
 //TODO in the futer this should be used for now its hardcode like above
