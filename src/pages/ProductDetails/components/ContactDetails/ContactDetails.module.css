@@ -17,7 +17,6 @@
   opacity: 0.5;
 }
 
-
 .linksContainer {
   display: flex;
   flex-direction: column;
@@ -27,7 +26,7 @@
 .name {
   line-height: 1.5;
   text-decoration: underline;
-  font-family: var(--primary-font-600);
+  font-weight: 600;
   font-size: 1.4rem;
   display: flex;
   column-gap: 0.8rem;
@@ -35,9 +34,8 @@
     padding-top: 0.25rem;
     align-self: flex-start;
   }
-  span{
-  direction: ltr;
-
+  span {
+    direction: ltr;
   }
 }
 
@@ -46,12 +44,13 @@
 }
 
 .button {
-  font-family: var(--primary-font-700);
   font-size: 2rem;
   border-radius: 4px;
   background-color: var(--blush-rose);
   padding: 1.5rem 2rem;
-  width: fit-content;
   margin-right: 3.5rem;
   color: #fff;
+  display: block;
+  font-weight: 700;
+  line-height: 16px;
 }

@@ -19,7 +19,7 @@ body {
   max-width: 1920px;
   overflow-x: hidden;
   direction: rtl;
-  font-family: var(--primary-font-regular-400);
+  font-family: var(--primary-font);
   background: var(--bg-color);
   color: var(--charcoal-gray);
   /* font-family: var(--primary-font); */

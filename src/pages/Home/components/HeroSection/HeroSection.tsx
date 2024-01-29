@@ -17,7 +17,7 @@ const HeroSection = () => {
           <div className={styles.searchBarContainer}>
             <SearchFilterBar />
           </div>
-          <h2 className={styles.subTitle}>הצטרפו אלינו לאחרונה ל -Hub:</h2>
+          <h2 className={styles.subTitle}>הצטרפו אלינו לאחרונה ל - Hub:</h2>
         </div>
       </div>
     </div>

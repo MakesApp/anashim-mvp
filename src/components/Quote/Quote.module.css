@@ -1,21 +1,13 @@
-.container {
-  border-radius: 4px;
-  background-color: var(--pearl-white);
-  padding: 1.5rem;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
 .quoteIcon {
   position: absolute;
 }
 
 .text {
-  display: block;
+  display: flex;
   padding-right: 2.5rem;
-  font-family: var(--primary-font-thin-400);
   overflow: hidden;
   height: 100%;
   text-overflow: ellipsis;
+  flex-direction: column;
+  row-gap: 1rem;
 }

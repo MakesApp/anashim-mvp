@@ -12,7 +12,7 @@ const Article: React.FC<IArticle> = ({ title, brief, image, link, logo }) => {
           <p className={styles.brief}>{brief}</p>
           <div className={styles.info}>
             <img loading="lazy" src={logo} alt="Logo" className={styles.logo} />
-            <div className={styles.showMore}>למידע נוסף</div>
+            <div className={styles.showMore}>להציג מידע</div>
           </div>
         </div>
       </article>
