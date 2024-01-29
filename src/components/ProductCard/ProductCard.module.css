@@ -1,16 +1,17 @@
 .link {
   position: relative;
   width: 100%;
+  background-color: #fff;
+  height: 100%;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
 }
 .container {
   width: 100%;
   height: 100%;
-  border-radius: 4px;
-  background-color: #fff;
-  padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid #dfdfdf;
 }
 
 .logo {
@@ -42,6 +43,10 @@
   font-size: 1.4rem;
   margin: 1.6rem 0;
   line-height: 16px;
+  border-radius: 4px;
+  background-color: var(--pearl-white);
+  padding: 1.5rem;
+  position: relative;
 }
 .infoBox {
   color: #fff;
@@ -52,4 +57,17 @@
   width: fit-content;
   border-radius: 4px;
   align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: unset;
+  }
+  .link {
+    height: 100%;
+    padding: 16px;
+  }
+  .logo {
+    max-height: 8rem;
+  }
 }

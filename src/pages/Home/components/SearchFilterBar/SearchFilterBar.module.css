@@ -21,17 +21,25 @@
   width: 100%;
 }
 
-.input::placeholder{
+.input::placeholder {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: 100%; 
-  display: block; 
+  max-width: 100%;
+  display: block;
 }
 
 @media (max-width: 768px) {
-.input::placeholder{
-  font-size: 18px;
-}
-
+  .input {
+    font-size: 18px;
+    height: unset;
+    padding: 8px 12px;
+  }
+  .input::placeholder {
+    font-size: 18px;
+  }
+  .searchIcon {
+    margin-top: unset;
+    align-self: unset;
+  }
 }

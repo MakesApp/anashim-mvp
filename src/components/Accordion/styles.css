@@ -106,8 +106,10 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .AccordionTrigger{
+  .AccordionTrigger {
     font-size: 18px;
-    
+    height: unset;
+    padding: 8px 12px;
+    line-height: unset;
   }
 }

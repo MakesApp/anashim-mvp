@@ -19,10 +19,11 @@
 @media (max-width: 768px) {
   .container {
     width: 100%;
-    padding: 5%;
-    height: 90px;
+    padding: 1.5rem;
+    max-height: 95px;
   }
   .title {
     font-size: 1.8rem;
+    margin-bottom: 8px;
   }
 }

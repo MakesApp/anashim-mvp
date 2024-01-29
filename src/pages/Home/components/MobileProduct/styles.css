@@ -1,0 +1,9 @@
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 85% !important;
+  display: flex; /* If you're using flex in your ProductCard, ensure alignment */
+  justify-content: center; /* Center the content within the slide */
+}
