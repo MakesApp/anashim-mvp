@@ -9,6 +9,5 @@
 
 .text {
   display: block;
-  font-size: 1.2rem;
-  font-family: var(--primary-font-600);
+  font-weight: 600;
 }

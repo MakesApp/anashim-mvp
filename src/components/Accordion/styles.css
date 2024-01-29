@@ -41,8 +41,8 @@
 
 .AccordionTrigger {
   font-size: 24px;
-  font-family: var(--primary-font-regular);
   background-color: transparent;
+  font-weight: 400;
   padding-right: 12px;
   padding-left: 12px;
   height: 48px;
@@ -106,8 +106,7 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .AccordionTrigger{
+  .AccordionTrigger {
     font-size: 18px;
-    
   }
 }

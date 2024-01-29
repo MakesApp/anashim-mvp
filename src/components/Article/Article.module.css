@@ -23,8 +23,8 @@
 
 .title {
   font-size: 2rem;
-  font-family: var(--primary-font-900);
   line-height: 20px;
+  font-weight: 900;
 }
 
 .brief {
@@ -51,9 +51,9 @@
 
 .showMore {
   font-size: 1.4rem;
-  font-family: var(--primary-font-600);
   background-color: #fff;
   color: var(--blush-rose);
+  font-weight: 600;
   padding: 0.4rem 1.2rem;
   width: fit-content;
   border: 1px solid var(--blush-rose);

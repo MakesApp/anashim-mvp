@@ -1,4 +1,4 @@
-.main_container{
+.main_container {
   display: flex;
   flex-direction: column;
 }
@@ -8,7 +8,6 @@
 }
 .container {
   padding: 3% 0;
-
 }
 
 .hero {
@@ -48,11 +47,10 @@
 
 .resultNumber {
   color: var(--charcoal-gray);
-  font-family: var(--primary-font-900);
   font-weight: 900;
   font-size: 24px;
   letter-spacing: 0.38px;
 }
-.noResults_page{
-    padding:  4% 0 12.5% 0;
+.noResults_page {
+  padding: 4% 0 12.5% 0;
 }

@@ -22,7 +22,7 @@
 .companyName {
   margin-top: 1.5rem;
   font-size: 20px;
-  font-family: var(--primary-font-900);
+  font-weight: 900;
 }
 
 .textContainer {
@@ -30,23 +30,30 @@
 }
 .lastAdded {
   font-size: 1.2rem;
-  font-family: var(--primary-font-600);
   letter-spacing: 0.066px;
   color: var(--rose-pink);
+  font-weight: 600;
 }
 .tagsContainer {
   margin-top: 1rem;
+  font-size: 1.2rem;
 }
 .quoteContainer {
   height: 11.2rem;
   font-size: 1.4rem;
   margin: 1.6rem 0;
   line-height: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  background-color: var(--pearl-white);
+  padding: 1.5rem;
+  width: 100%;
+  position: relative;
 }
 .infoBox {
   color: #fff;
-  font-family: var(--primary-font-600);
   font-size: 1.4rem;
+  font-weight: 600;
   padding: 0.8rem 1.2rem;
   background-color: var(--blush-rose);
   width: fit-content;
