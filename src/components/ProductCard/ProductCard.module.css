@@ -1,4 +1,5 @@
 .link {
+  display: block;
   position: relative;
   width: 100%;
   background-color: #fff;
@@ -66,8 +67,5 @@
   .link {
     height: 100%;
     padding: 16px;
-  }
-  .logo {
-    max-height: 8rem;
   }
 }

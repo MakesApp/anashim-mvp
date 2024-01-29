@@ -1,4 +1,3 @@
-
 .article_news_title {
   font-size: 3.6rem;
   font-family: var(--primary-font-regular-400);
@@ -13,15 +12,21 @@
   row-gap: 2.5rem;
   flex: 1;
 }
-.article_news_container{
+.article_news_container {
   display: flex;
   align-items: center;
   column-gap: 1rem;
-
 }
 
-.article_section{
+.article_section {
   display: flex;
   column-gap: 1rem;
-  margin-top:8% ;
+  margin-top: 8%;
+}
+
+@media (max-width: 768px) {
+  .article_section {
+    display: flex;
+    flex-direction: column;
+  }
 }

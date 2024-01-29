@@ -22,6 +22,9 @@ body {
   font-family: var(--primary-font-regular-400);
   background: var(--bg-color);
   color: var(--charcoal-gray);
+  ::-webkit-scrollbar {
+    display: none;
+  }
   /* font-family: var(--primary-font); */
   /* font-size: clamp(1rem, 4vw, 1.5rem); */
 }

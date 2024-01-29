@@ -59,3 +59,17 @@
   border: 1px solid var(--blush-rose);
   border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+    line-height: 18px;
+  }
+  .img {
+    width: 100px;
+  }
+  .brief {
+    font-size: 1.2rem;
+    line-height: 14px;
+  }
+}

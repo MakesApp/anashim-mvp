@@ -9,7 +9,7 @@ import ProductCard from '@/components/ProductCard/ProductCard';
 const AHA = () => {
   return (
     <Swiper
-      spaceBetween={'8px'} // Set the space between slides to 8px
+      spaceBetween={'10px'} // Set the space between slides to 8px
       slidesPerView={'auto'} // Adjust to 'auto' for flexible slide sizes
       centeredSlides={false} // Center the active slide
       onSlideChange={() => console.log('slide change')}
@@ -18,7 +18,7 @@ const AHA = () => {
       {getLastAddedProducts().map((product, index) => {
         return (
           <SwiperSlide key={index}>
-            <ProductCard {...product} />
+            <ProductCard {...product} lastAdded={true} />
           </SwiperSlide>
         );
       })}
