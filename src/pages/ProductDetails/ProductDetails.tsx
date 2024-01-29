@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const product = getProductById(productId);
   return (
     <main className={styles.container}>
-      <img className={styles.bgImg} aria-hidden="true" src={bgImg} alt="hero img" />\
+      <img className={styles.bgImg} aria-hidden="true" src={bgImg} alt="hero img" />
       {!product ? (
         <></>
       ) : (
