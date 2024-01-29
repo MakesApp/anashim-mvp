@@ -5,6 +5,13 @@
   justify-content: space-between;
   padding: 1rem 10%;
 }
+
+.anashimIL {
+  width: 151px;
+  display: block;
+  object-fit: contain;
+  height: 100%;
+}
 @media (max-width: 768px) {
   .header {
     padding: 10% 0 2.5% 0;

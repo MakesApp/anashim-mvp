@@ -16,7 +16,7 @@ import ProductsList from '../Home/components/ProductsList/ProductsList';
 import ArticleSection from '@/components/ArticleSection/ArticleSection';
 
 const SearchProduct: React.FC = () => {
-  const article=articles[0]
+  const article = articles[0];
   const [queryForSearchBar, setQueryForSearchBar] = useState<string>('');
   const [filtersForSearchBar, setFiltersForSearchBar] = useState<any>([]);
   const [tags, setTags] = useState<any>([]);
@@ -91,42 +91,40 @@ const SearchProduct: React.FC = () => {
           <SearchFilterBar query={queryForSearchBar} filters={filtersForSearchBar} />
         </div>
       </div>
-      {filteredProducts.length?
-      <div className={styles.wrapper}>
-        <div className={styles.container}>
-          {searchParams.get('query') && filteredProducts.length > 0 && (
-            <QueryDetails
-              numOfProducts={filteredProducts.length}
-              query={searchParams.get('query')}
-            />
-          )}
-          {filtersForSearchBar.length > 0 && filteredProducts.length > 0 && (
-            <FilterDetails
-              tags={tags}
-              numOfProducts={filteredProducts.length}
-              handleRemoveTag={handleRemoveTag}
-            />
-          )}
-  
-        </div>
-        <ul className={styles.ul}>
-          {filteredProducts.map((product: any) => {
-            return (
-              <li key={product.name} className={styles.li}>
-                <ProductCard {...product} />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-:      (
-  <div className={styles.noResults_page}>
-          <NoResults/>
-          <ProductsList/>
-            <ArticleSection article={article}/>
+      {filteredProducts.length ? (
+        <div className={styles.wrapper}>
+          <div className={styles.container}>
+            {searchParams.get('query') && filteredProducts.length > 0 && (
+              <QueryDetails
+                numOfProducts={filteredProducts.length}
+                query={searchParams.get('query')}
+              />
+            )}
+            {filtersForSearchBar.length > 0 && filteredProducts.length > 0 && (
+              <FilterDetails
+                tags={tags}
+                numOfProducts={filteredProducts.length}
+                handleRemoveTag={handleRemoveTag}
+              />
+            )}
           </div>
-          )
-}
+          <ul className={styles.ul}>
+            {filteredProducts.map((product: any) => {
+              return (
+                <li key={product.name + product.id} className={styles.li}>
+                  <ProductCard {...product} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ) : (
+        <div className={styles.noResults_page}>
+          <NoResults />
+          <ProductsList />
+          <ArticleSection article={article} />
+        </div>
+      )}
     </div>
   );
 };

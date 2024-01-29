@@ -43,6 +43,9 @@
     display: block;
   }
 }
+.phone {
+  direction: ltr;
+}
 
 .hidden {
   display: none;
