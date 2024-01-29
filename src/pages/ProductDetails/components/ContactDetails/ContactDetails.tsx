@@ -59,8 +59,8 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
               />
             </span>
           </a>}
-       {linkedIn&&   <a href={linkedIn} target="_blank" className={styles.detail}>
-            <img
+       {linkedIn &&   <a href={linkedIn} target="_blank" className={styles.detail}>
+            <img  
               className={`${styles.icon} ${showDetails ? '' : styles.lowOpacity}`}
               src={linkedinIcon}
               alt="email"
