@@ -19,6 +19,7 @@
   background: var(--white);
   height: 48px;
   width: 100%;
+  font-family: 'pauza';
 }
 
 .input::placeholder {
