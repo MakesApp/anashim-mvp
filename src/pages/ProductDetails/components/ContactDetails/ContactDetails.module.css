@@ -7,6 +7,7 @@
 }
 .detail {
   display: flex;
+  align-items: center;
   column-gap: 1.5rem;
 }
 .icon {
@@ -30,12 +31,16 @@
   font-size: 1.4rem;
   display: flex;
   column-gap: 0.8rem;
+  width: 300px;
   img {
     padding-top: 0.25rem;
     align-self: flex-start;
   }
   span {
-    direction: ltr;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
 }
 
