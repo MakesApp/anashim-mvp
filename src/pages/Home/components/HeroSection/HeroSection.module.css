@@ -9,6 +9,9 @@
   align-items: center;
   row-gap: 4%;
 }
+.hero_content {
+  width: 100%;
+}
 .hero::after {
   position: absolute;
   width: 100vw;
@@ -30,25 +33,25 @@
 }
 .intro {
   font-size: 2rem;
-  font-family: var(--primary-font-light-400);
+  font-weight: 400;
   letter-spacing: 0.38px;
 }
 
 .title {
   font-size: 5.5rem;
-  font-family: var(--primary-font-700);
   white-space: pre-line;
+  font-weight: 700;
 }
 
 .subTitle {
-  font-size: 3.6rem;
+  font-size: 36px;
   text-align: center;
-  font-family: var(--primary-font-600);
+  font-weight: 500;
 }
 
 .bold {
   font-size: 2.6rem;
-  font-family: var(--primary-font-700);
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -80,5 +83,8 @@
   }
   .hero {
     padding: 24px 0 120px 0;
+  }
+  .bold {
+    font-weight: 400;
   }
 }

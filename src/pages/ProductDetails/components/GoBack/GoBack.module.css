@@ -7,5 +7,6 @@
 
 .text {
   font-size: 1.2rem;
-  font-family: var(--primary-font-600);
+  font-weight: 600;
+  line-height: 16px;
 }

@@ -1,6 +1,6 @@
 .article_news_title {
   font-size: 3.6rem;
-  font-family: var(--primary-font-regular-400);
+  font-weight: 400;
   font-weight: 600;
   color: var(--blush-rose);
   text-align: center;
@@ -26,7 +26,15 @@
 
 @media (max-width: 768px) {
   .article_section {
-    display: flex;
     flex-direction: column;
+    column-gap: unset;
+    row-gap: 1.6rem;
+    margin-top: 2.4rem;
+  }
+  .article_news_container {
+    display: none;
+  }
+  .article_news {
+    height: 154px;
   }
 }

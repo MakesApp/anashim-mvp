@@ -1,0 +1,27 @@
+.container {
+  height: 100dvh;
+  background-color: #fff;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0 10%;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10rem;
+}
+
+.text {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+}

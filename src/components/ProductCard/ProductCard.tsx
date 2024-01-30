@@ -45,7 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className={styles.quoteContainer}>
           <Quote text={shortDescription} />
         </div>
-        <div className={styles.infoBox}>למידע נוסף</div>
+        <div className={styles.infoBox}>להציג מידע</div>
       </div>
     </Link>
   );

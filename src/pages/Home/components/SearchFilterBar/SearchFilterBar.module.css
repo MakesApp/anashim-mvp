@@ -15,17 +15,20 @@
   border-radius: 4px;
   font-size: 24px;
   color: var(--gray-light);
-  font-family: var(--primary-font-600);
+  font-weight: 600;
   background: var(--white);
   height: 48px;
   width: 100%;
+  font-family: 'pauza';
 }
 
 .input::placeholder {
+  font-family: var(--primary-font);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 100%;
+  font-weight: 600;
   display: block;
 }
 

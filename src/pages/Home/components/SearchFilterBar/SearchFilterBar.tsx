@@ -65,7 +65,7 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
 
   return (
     <>
-      <FilterLayout title="חפש לפי סינון">
+      <FilterLayout title="חיפוש לפי סינון">
         <div className={styles.wrapper}>
           {accordionItems.map((item) => (
             <Accordion
@@ -94,14 +94,14 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
         </div>
       </FilterLayout>
 
-      <FilterLayout title="חפש לפי הנחיה">
+      <FilterLayout title="חיפוש לפי הנחיה">
         <div className={styles.wrapper}>
           <input
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
             value={search}
             type="text"
             className={styles.input}
-            placeholder="חפש לפי שם או תיאור"
+            placeholder="חיפוש לפי שם או תיאור"
           />
           <SearchButton callback={searchByInput} />
         </div>

@@ -7,6 +7,7 @@
 }
 .detail {
   display: flex;
+  align-items: center;
   column-gap: 1.5rem;
 }
 .icon {
@@ -17,7 +18,6 @@
   opacity: 0.5;
 }
 
-
 .linksContainer {
   display: flex;
   flex-direction: column;
@@ -25,20 +25,26 @@
 }
 
 .name {
-  line-height: 1.5;
+  line-height: 24px;
   text-decoration: underline;
-  font-family: var(--primary-font-600);
-  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.6rem;
   display: flex;
   column-gap: 0.8rem;
+  width: 300px;
   img {
     padding-top: 0.25rem;
     align-self: flex-start;
   }
-  span{
-  direction: ltr;
-
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
+}
+.phone {
+  direction: ltr;
 }
 
 .hidden {
@@ -46,12 +52,15 @@
 }
 
 .button {
-  font-family: var(--primary-font-700);
   font-size: 2rem;
   border-radius: 4px;
   background-color: var(--blush-rose);
   padding: 1.5rem 2rem;
-  width: fit-content;
   margin-right: 3.5rem;
   color: #fff;
+  display: block;
+  font-weight: 500;
+  line-height: 16px; /* 80% */
+  letter-spacing: 0.066px;
+  font-family: 'pauza';
 }

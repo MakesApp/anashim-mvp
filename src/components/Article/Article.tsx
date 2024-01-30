@@ -4,7 +4,7 @@ import { IArticle } from '@/localTypes/article.types';
 
 const Article: React.FC<IArticle> = ({ title, brief, image, link, logo }) => {
   return (
-    <a className={styles.container} href={link} target="_blank">
+    <a className={styles.container} href={link} target="_blank" rel="noreferrer">
       <article className={styles.article}>
         <img className={styles.img} loading="lazy" src={image} alt={title} />
         <div className={styles.content}>
@@ -12,7 +12,7 @@ const Article: React.FC<IArticle> = ({ title, brief, image, link, logo }) => {
           <p className={styles.brief}>{brief}</p>
           <div className={styles.info}>
             <img loading="lazy" src={logo} alt="Logo" className={styles.logo} />
-            <div className={styles.showMore}>למידע נוסף</div>
+            <div className={styles.showMore}>להציג מידע</div>
           </div>
         </div>
       </article>

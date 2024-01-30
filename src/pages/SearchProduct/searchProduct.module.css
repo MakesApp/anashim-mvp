@@ -48,7 +48,6 @@
 
 .resultNumber {
   color: var(--charcoal-gray);
-  font-family: var(--primary-font-900);
   font-weight: 900;
   font-size: 24px;
   letter-spacing: 0.38px;
