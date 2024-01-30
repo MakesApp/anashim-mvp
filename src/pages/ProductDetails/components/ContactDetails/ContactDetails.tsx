@@ -6,6 +6,7 @@ import webIcon from '@assets/icons/contact/web.png';
 import styles from './ContactDetails.module.css';
 import linkIcon from '@assets/icons/link.svg';
 import { IContactDetailsProps } from './ContactDetails.type';
+import ReactGA from 'react-ga4';
 
 const ContactDetails: React.FC<IContactDetailsProps> = ({
   name,
@@ -16,16 +17,13 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const toggleDetailsBtn = () => {
-    console.log('i am in click', window.gtag);
-    if (window.gtag) {
-      console.log('GOING TO ANAYLITCS');
-      window.gtag('event', 'click_on_product_details_cta', {
-        event_category: 'Button Click',
-        event_label: 'Click on product details CTA',
-        value: name,
-      });
-    }
-    setShowDetails(!showDetails);
+    setShowDetails((prevState) => !prevState);
+
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'click_on_product_details_cta',
+      label: `Product Name: ${name}`,
+    });
   };
   return (
     <div className={styles.container}>
