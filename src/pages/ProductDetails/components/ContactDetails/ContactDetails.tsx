@@ -18,9 +18,9 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
     window.gtag &&
-      window.gtag('event', 'reveal_company_details', {
+      window.gtag('event', 'click_on_product_details_cta', {
         event_category: 'Button Click',
-        event_label: 'Reveal Company Details',
+        event_label: 'Click on product details CTA',
         value: name,
       });
   };
