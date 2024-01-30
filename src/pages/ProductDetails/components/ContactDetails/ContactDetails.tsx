@@ -16,7 +16,6 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const toggleDetailsBtn = () => {
-    setShowDetails(!showDetails);
     console.log('i am in click', window.gtag);
     if (window.gtag) {
       console.log('GOING TO ANAYLITCS');
@@ -26,6 +25,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
         value: name,
       });
     }
+    setShowDetails(!showDetails);
   };
   return (
     <div className={styles.container}>
