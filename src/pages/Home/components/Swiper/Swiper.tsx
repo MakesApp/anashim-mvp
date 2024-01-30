@@ -1,17 +1,17 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperLib, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 import './styles.css';
 import getLastAddedProducts from '@/utils/getLastAddedProducts';
-import ProductCard from '@/components/ProductCard/ProductCard';
+import ProductCard from '../ProductCard/ProductCard';
 
-const AHA = () => {
+const Swiper = () => {
   return (
-    <Swiper
+    <SwiperLib
       spaceBetween={'10px'} // Set the space between slides to 8px
       slidesPerView={'auto'} // Adjust to 'auto' for flexible slide sizes
-      centeredSlides={false} // Center the active slide
+      centeredSlides={false}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
@@ -22,8 +22,8 @@ const AHA = () => {
           </SwiperSlide>
         );
       })}
-    </Swiper>
+    </SwiperLib>
   );
 };
 
-export default AHA;
+export default Swiper;

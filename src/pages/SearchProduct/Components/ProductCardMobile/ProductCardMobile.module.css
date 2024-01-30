@@ -4,7 +4,7 @@
   width: 100%;
   background-color: #fff;
   height: 100%;
-  padding: 2.5rem 1.5rem;
+  padding: 3.8rem 1.6rem 1.6rem 1.6rem;
   border: 1px solid #dfdfdf;
   border-radius: 4px;
 }
@@ -15,27 +15,21 @@
   flex-direction: column;
 }
 
-.logo {
-  height: 10rem;
-  width: 100%;
-  object-fit: contain;
+.textContainer {
+  flex: 1;
 }
-
-.companyName {
+.textContainer > h3 {
   margin-top: 1.5rem;
   font-size: 20px;
   font-weight: 900;
 }
-
-.textContainer {
-  flex: 1;
-}
-.lastAdded {
+.textContainer > span {
   font-size: 1.2rem;
   letter-spacing: 0.066px;
   color: var(--rose-pink);
   font-weight: 600;
 }
+
 .tagsContainer {
   margin-top: 1rem;
   font-size: 1.2rem;
@@ -52,7 +46,7 @@
   width: 100%;
   position: relative;
 }
-.infoBox {
+.infoBoxContainer > div {
   color: #fff;
   font-size: 1.4rem;
   font-weight: 600;
@@ -62,17 +56,14 @@
   border-radius: 4px;
   align-self: flex-end;
 }
+.logoContainer > img {
+  height: 4rem;
+  object-fit: contain;
+}
 
-@media (max-width: 768px) {
-  .container {
-    padding: unset;
-  }
-  .link {
-    height: 100%;
-    padding: 16px;
-  }
-  .quoteContainer {
-    padding: 1.5rem 0.8rem;
-    width: unset;
-  }
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  align-items: center;
 }

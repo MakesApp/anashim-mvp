@@ -1,9 +1,9 @@
 /// <reference types="vite-plugin-svgr/client" />
 import styles from './filterDetails.module.css';
 import { FC } from 'react';
-import Tag from '@/components/Tag/Tag';
 import CloseIcon from '@assets/icons/close.svg?react';
 import { FilterDetailsProps } from './FilterDetails.types';
+import Tag from '@/components/Product/components/Tag/Tag';
 
 const FilterDetails: FC<FilterDetailsProps> = ({
   tags,

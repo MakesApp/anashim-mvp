@@ -11,14 +11,13 @@ const HeroSection = () => {
         <div className={styles.bold}>בתחומי החינוך, הלמידה והעבודה</div>
       </p>
 
-      <div>
+      <div className={styles.titleContainer}>
         <h1 className={styles.title}>למצוא את כל מה שחדש בפיתוח ההון האנושי</h1>
         <div className={styles.searchBarContainer}>
           <SearchFilterBar />
         </div>
         <h2 className={styles.subTitle}>הצטרפו אלינו לאחרונה ל - Hub:</h2>
       </div>
-      <h2 className={styles.subTitle}>הצטרפו אלינו לאחרונה ל -Hub:</h2>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import ProductCard from '@components/ProductCard/ProductCard';
+import ProductCard from '../ProductCard/ProductCard';
 import styles from './ProductsList.module.css';
 import getLastFourProducts from '@utils/getLastAddedProducts';
 

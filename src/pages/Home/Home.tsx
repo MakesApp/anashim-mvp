@@ -4,11 +4,12 @@ import styles from './Home.module.css';
 import HeroSection from './components/HeroSection/HeroSection';
 import ProductsList from './components/ProductsList/ProductsList';
 import { articles } from '@/data';
-import AHA from './components/MobileProduct/AHA';
+import Swiper from './components/Swiper/Swiper';
 import useIsMobile from '@/hooks/useIsMobile';
 const article = articles[0];
 const Home = () => {
   const isMobile = useIsMobile();
+
   return (
     <>
       <main className={styles.home}>
@@ -18,7 +19,7 @@ const Home = () => {
             <ProductsList />
           </section>
         ) : (
-          <AHA />
+          <Swiper />
         )}
         <ArticleSection article={article} />
       </main>

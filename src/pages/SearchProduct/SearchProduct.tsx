@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FilterMapping } from './SearchProduct.types';
 import { useSearchParams } from 'react-router-dom';
-import ProductCard from '@/components/ProductCard/ProductCard';
 import styles from './searchProduct.module.css';
 import sortProductsByDate from '@/utils/sortProductsByDate';
 import { articles, prodcuts } from '@/data';
@@ -14,6 +13,10 @@ import FilterDetails from './Components/FilterDetails/FilterDetails';
 import NoResults from './Components/NoResult/NoResults';
 import ProductsList from '../Home/components/ProductsList/ProductsList';
 import ArticleSection from '@/components/ArticleSection/ArticleSection';
+// import ProductCardMobile from './Components/ProductCardMobile/ProductCardMobile';
+import useIsMobile from '@/hooks/useIsMobile';
+import ProductCard from '../Home/components/ProductCard/ProductCard';
+import ProductCardMobile from './Components/ProductCardMobile/ProductCardMobile';
 
 const SearchProduct: React.FC = () => {
   const article = articles[0];
@@ -21,7 +24,7 @@ const SearchProduct: React.FC = () => {
   const [filtersForSearchBar, setFiltersForSearchBar] = useState<any>([]);
   const [tags, setTags] = useState<any>([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-
+  const isMobile = useIsMobile();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -112,7 +115,11 @@ const SearchProduct: React.FC = () => {
             {filteredProducts.map((product: any) => {
               return (
                 <li key={product.name + product.id} className={styles.li}>
-                  <ProductCard {...product} />
+                  {isMobile ? (
+                    <ProductCardMobile {...product} />
+                  ) : (
+                    <ProductCard {...product} />
+                  )}
                 </li>
               );
             })}

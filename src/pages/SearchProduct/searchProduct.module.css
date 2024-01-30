@@ -55,3 +55,23 @@
 .noResults_page {
   padding: 4% 0 12.5% 0;
 }
+
+@media (max-width: 768px) {
+  .searchWrapper {
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 50px;
+  }
+  .hero::after {
+    left: -2.5%;
+  }
+  .ul {
+    column-gap: unset;
+    flex-wrap: unset;
+    flex-direction: column;
+  }
+  .li {
+    width: 100%;
+    max-width: unset;
+  }
+}
