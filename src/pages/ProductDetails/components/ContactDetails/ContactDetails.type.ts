@@ -3,4 +3,5 @@ export interface IContactDetailsProps {
   email: string;
   linkedIn: string;
   link: string;
+  name: string;
 }
