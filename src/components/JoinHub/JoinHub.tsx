@@ -1,12 +1,12 @@
 import styles from './JoinHub.module.css';
+import ReactGA from 'react-ga4';
 
 const JoinHub = () => {
   const handleExternalLinkClick = () => {
-    window.gtag &&
-      window.gtag('event', 'click_on_add_product_cta', {
-        event_category: 'Button Click',
-        event_label: 'Click on add product CTA',
-      });
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'click_on_add_product_cta',
+    });
   };
 
   return (

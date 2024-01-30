@@ -5,6 +5,7 @@ import TagList from '../TagList/TagList';
 import Quote from '../Quote/Quote';
 import { ProductCardProps } from './ProductCard.types';
 import getManipulatedTags from '@/utils/getManipulatedTags';
+import ReactGA from 'react-ga4';
 
 import { Link } from 'react-router-dom';
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -31,12 +32,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const tags = [typeAndSectorTags, fieldTags] as any;
 
   const handleLinkClick = () => {
-    window.gtag &&
-      window.gtag('event', 'click_on_product_card_cta', {
-        event_category: 'Button Click',
-        event_label: 'Click on product card CTA',
-        value: name,
-      });
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'click_on_product_details_cta',
+      label: `Product Name: ${name}`,
+    });
   };
 
   return (
