@@ -31,17 +31,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const fieldTags = allTags.filter((tag: any) => tag.name === 'תחום');
   const tags = [typeAndSectorTags, fieldTags] as any;
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    //prevent bubbling
+    e.stopPropagation();
     ReactGA.event({
       category: 'Button Click',
-      action: 'click_on_product_details_cta',
+      action: 'click_on_product_card_cta',
       label: `Product Name: ${name}`,
     });
   };
 
   return (
     <Link
-      onClick={handleLinkClick}
+      onClick={(e) => handleLinkClick(e)}
       className={styles.link}
       to={{ pathname: `/product/${id}` }}
     >

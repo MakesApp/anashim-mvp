@@ -16,7 +16,8 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   email,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
-  const toggleDetailsBtn = () => {
+  const toggleDetailsBtn = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     setShowDetails((prevState) => !prevState);
 
     ReactGA.event({
@@ -94,7 +95,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
         )}
       </div>
       {!showDetails && (
-        <button onClick={toggleDetailsBtn} className={styles.button}>
+        <button onClick={(e) => toggleDetailsBtn(e)} className={styles.button}>
           להציג פרטי התקשרות
         </button>
       )}
