@@ -3,6 +3,7 @@
   <head>
     <!-- Google tag (gtag.js) -->
 <script type="module">
+  console.log("THIS IS THE ENV", import.meta.env.VITE_APP_ENV)
   if (import.meta.env.VITE_APP_ENV === 'production') {
     const script = document.createElement('script');
     script.async = true;
