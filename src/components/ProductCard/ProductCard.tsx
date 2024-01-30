@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const handleLinkClick = () => {
     ReactGA.event({
       category: 'Button Click',
-      action: 'click_on_product_details_cta',
+      action: 'click_on_product_card_cta',
       label: `Product Name: ${name}`,
     });
   };
