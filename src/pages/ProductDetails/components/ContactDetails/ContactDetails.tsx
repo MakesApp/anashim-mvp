@@ -8,6 +8,7 @@ import linkIcon from '@assets/icons/link.svg';
 import { IContactDetailsProps } from './ContactDetails.type';
 
 const ContactDetails: React.FC<IContactDetailsProps> = ({
+  name,
   phone,
   link,
   linkedIn,
@@ -16,6 +17,12 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   const [showDetails, setShowDetails] = useState(false);
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
+    window.gtag &&
+      window.gtag('event', 'reveal_company_details', {
+        event_category: 'Button Click',
+        event_label: 'Reveal Company Details',
+        value: name,
+      });
   };
   return (
     <div className={styles.container}>
