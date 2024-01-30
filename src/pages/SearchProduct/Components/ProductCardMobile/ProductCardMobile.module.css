@@ -19,7 +19,6 @@
   flex: 1;
 }
 .textContainer > h3 {
-  margin-top: 1.5rem;
   font-size: 20px;
   font-weight: 900;
 }
@@ -35,7 +34,7 @@
   font-size: 1.2rem;
 }
 .quoteContainer {
-  height: 11.2rem;
+  height: 8rem;
   font-size: 1.4rem;
   margin: 1.6rem 0;
   line-height: 16px;
@@ -44,7 +43,11 @@
   background-color: var(--pearl-white);
   padding: 1.5rem;
   width: 100%;
-  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.infoBoxContainer {
+  align-self: flex-end;
 }
 .infoBoxContainer > div {
   color: #fff;
@@ -64,6 +67,5 @@
 .row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
   align-items: center;
 }
