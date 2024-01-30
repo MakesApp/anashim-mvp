@@ -3,7 +3,8 @@
   <head>
     <!-- Google tag (gtag.js) -->
 <script type="module">
-  console.log("THIS IS THE ENV", import.meta.env.VITE_APP_ENV)
+  console.log("Environment:", import.meta.env.VITE_APP_ENV);
+  
   if (import.meta.env.VITE_APP_ENV === 'production') {
     const script = document.createElement('script');
     script.async = true;
@@ -12,9 +13,9 @@
 
     script.onload = () => {
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RM8BX0Z28J');
+      window.gtag = function(){ dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-RM8BX0Z28J');
     };
   }
 </script>
