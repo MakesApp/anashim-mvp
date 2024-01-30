@@ -30,8 +30,21 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const fieldTags = allTags.filter((tag: any) => tag.name === 'תחום');
   const tags = [typeAndSectorTags, fieldTags] as any;
 
+  const handleLinkClick = () => {
+    window.gtag &&
+      window.gtag('event', 'click_on_product_card_cta', {
+        event_category: 'Button Click',
+        event_label: 'Click on product card CTA',
+        value: name,
+      });
+  };
+
   return (
-    <Link className={styles.link} to={{ pathname: `/product/${id}` }}>
+    <Link
+      onClick={handleLinkClick}
+      className={styles.link}
+      to={{ pathname: `/product/${id}` }}
+    >
       {lastAdded && <Ribbon />}
       <div className={styles.container}>
         <img className={styles.logo} src={logo} alt={logo + ' logo'} loading="lazy" />
