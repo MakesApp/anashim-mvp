@@ -18,12 +18,13 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
     console.log('GTA', window.gtag);
-    window.gtag &&
+    if (window.gtag) {
       window.gtag('event', 'click_on_product_details_cta', {
         event_category: 'Button Click',
         event_label: 'Click on product details CTA',
         value: name,
       });
+    }
   };
   return (
     <div className={styles.container}>
