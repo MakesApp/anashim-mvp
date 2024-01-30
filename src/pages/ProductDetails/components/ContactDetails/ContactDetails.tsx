@@ -17,6 +17,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
   const [showDetails, setShowDetails] = useState(false);
   const toggleDetailsBtn = () => {
     setShowDetails(!showDetails);
+    console.log('GTA', window.gtag);
     window.gtag &&
       window.gtag('event', 'click_on_product_details_cta', {
         event_category: 'Button Click',
