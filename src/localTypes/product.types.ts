@@ -14,4 +14,5 @@ export type Product = {
   logo: string;
   linkedIn: string;
   date: string;
+  tempVariable?: boolean;
 };
