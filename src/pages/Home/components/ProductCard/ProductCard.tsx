@@ -20,7 +20,7 @@ const ProductCard: React.FC<ProductType & { lastAdded?: boolean }> = ({
 }) => {
   const tags = getTags({ fields, sector, type });
   return (
-    <Product id={id} lastAdded={lastAdded}>
+    <Product id={id} lastAdded={lastAdded} name={name}>
       <div className={styles.imgContainer}>
         <Logo logo={logo} />
       </div>
