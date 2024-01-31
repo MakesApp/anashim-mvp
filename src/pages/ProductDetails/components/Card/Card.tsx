@@ -27,7 +27,13 @@ const Card: React.FC<Product> = ({
         <div className={styles.logoContainer}>
           <Logo logo={logo} />
         </div>
-        <ContactDetails email={email} phone={phone} linkedIn={linkedIn} link={link} />
+        <ContactDetails
+          name={name}
+          email={email}
+          phone={phone}
+          linkedIn={linkedIn}
+          link={link}
+        />
       </div>
       <div className={styles.leftSide}>
         <CompanyName name={name} />

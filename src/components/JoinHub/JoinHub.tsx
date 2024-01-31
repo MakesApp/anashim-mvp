@@ -1,6 +1,14 @@
 import styles from './JoinHub.module.css';
+import ReactGA from 'react-ga4';
 
 const JoinHub = () => {
+  const handleExternalLinkClick = () => {
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'click_on_add_product_cta',
+    });
+  };
+
   return (
     <div className={styles.container}>
       <p className={styles.big_text}>
@@ -15,6 +23,7 @@ const JoinHub = () => {
           target="_blank"
           rel="noreferrer"
           className={styles.bottom_link}
+          onClick={handleExternalLinkClick}
         >
           להצטרפות
         </a>

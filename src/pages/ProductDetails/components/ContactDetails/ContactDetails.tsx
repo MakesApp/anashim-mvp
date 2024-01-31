@@ -6,16 +6,25 @@ import webIcon from '@assets/icons/contact/web.png';
 import styles from './ContactDetails.module.css';
 import linkIcon from '@assets/icons/link.svg';
 import { IContactDetailsProps } from './ContactDetails.type';
+import ReactGA from 'react-ga4';
 
 const ContactDetails: React.FC<IContactDetailsProps> = ({
+  name,
   phone,
   link,
   linkedIn,
   email,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
-  const toggleDetailsBtn = () => {
-    setShowDetails(!showDetails);
+  const toggleDetailsBtn = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    setShowDetails((prevState) => !prevState);
+
+    ReactGA.event({
+      category: 'Button Click',
+      action: 'click_on_product_details_cta',
+      label: `Product Name: ${name}`,
+    });
   };
   return (
     <div className={styles.container}>
@@ -86,7 +95,7 @@ const ContactDetails: React.FC<IContactDetailsProps> = ({
         )}
       </div>
       {!showDetails && (
-        <button onClick={toggleDetailsBtn} className={styles.button}>
+        <button onClick={(e) => toggleDetailsBtn(e)} className={styles.button}>
           להציג פרטי התקשרות
         </button>
       )}
