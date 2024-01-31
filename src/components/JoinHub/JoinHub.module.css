@@ -55,3 +55,30 @@
   color: var(--blush-rose);
   align-self: flex-end;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.6rem;
+  }
+  .bottom_small_text {
+    font-size: 1.6rem;
+  }
+  .bottom_link {
+    margin-top: unset;
+  }
+  .bottom {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .big_text {
+    margin-bottom: 0.8rem;
+    line-height: 22px;
+    max-height: 44px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+}

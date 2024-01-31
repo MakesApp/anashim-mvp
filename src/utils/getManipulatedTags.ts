@@ -1,4 +1,4 @@
-import { TagProps } from '@/components/Tag/Tag.types';
+import { TagProps } from '@/components/Product/components/Tag/Tag.types';
 import { tags } from './constants';
 import { Field, Sector, Type } from './enum';
 

@@ -1,0 +1,13 @@
+.swiper {
+  margin-top: -20%;
+  width: 100vw;
+  overflow: visible;
+  right: -2.5%;
+  padding: 0 2.5%;
+}
+
+.swiper-slide {
+  width: 75% !important;
+  display: flex; /* If you're using flex in your ProductCard, ensure alignment */
+  justify-content: center; /* Center the content within the slide */
+}

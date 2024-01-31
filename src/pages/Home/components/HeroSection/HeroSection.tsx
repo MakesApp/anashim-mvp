@@ -4,21 +4,19 @@ import SearchFilterBar from '../SearchFilterBar/SearchFilterBar';
 const HeroSection = () => {
   return (
     <div className={styles.hero}>
-      <div className={styles.hero_content}>
-        <p className={styles.intro}>
-          <div>
-            הבית שמאגד את כל המיזמים, היוזמות והכלים החדשניים העוסקים בפיתוח ההון האנושי,
-          </div>
-          <div className={styles.bold}>בתחומי החינוך, הלמידה והעבודה</div>
-        </p>
-
+      <p className={styles.intro}>
         <div>
-          <h1 className={styles.title}>למצוא את כל מה שחדש בפיתוח ההון האנושי</h1>
-          <div className={styles.searchBarContainer}>
-            <SearchFilterBar />
-          </div>
-          <h2 className={styles.subTitle}>הצטרפו אלינו לאחרונה ל - Hub:</h2>
+          הבית שמאגד את כל המיזמים, היוזמות והכלים החדשניים העוסקים בפיתוח ההון האנושי,
         </div>
+        <div className={styles.bold}>בתחומי החינוך, הלמידה והעבודה</div>
+      </p>
+
+      <div className={styles.titleContainer}>
+        <h1 className={styles.title}>למצוא את כל מה שחדש בפיתוח ההון האנושי</h1>
+        <div className={styles.searchBarContainer}>
+          <SearchFilterBar />
+        </div>
+        <h2 className={styles.subTitle}>הצטרפו אלינו לאחרונה ל - Hub:</h2>
       </div>
     </div>
   );

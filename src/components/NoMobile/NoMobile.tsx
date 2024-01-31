@@ -1,6 +1,6 @@
 import styles from './NoMobile.module.css';
-import anashimInnovationHubMobile from '@assets/mobile/icons/anashimHub.svg';
-import anashimILMobile from '@assets/mobile/icons/anashimIL.svg';
+import anashimInnovationHubMobile from '@assets/mobile/icons/header/anashimHub.svg';
+import anashimILMobile from '@assets/mobile/icons/header/anashimIL.png';
 import sadEmoji from '@assets/icons/sadEmoji.svg';
 const NoMobile = () => {
   return (

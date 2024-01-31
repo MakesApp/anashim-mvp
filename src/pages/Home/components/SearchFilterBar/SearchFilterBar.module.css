@@ -33,7 +33,16 @@
 }
 
 @media (max-width: 768px) {
+  .input {
+    font-size: 18px;
+    height: unset;
+    padding: 8px 12px;
+  }
   .input::placeholder {
     font-size: 18px;
+  }
+  .searchIcon {
+    margin-top: unset;
+    align-self: unset;
   }
 }

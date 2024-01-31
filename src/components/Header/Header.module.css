@@ -14,6 +14,12 @@
 }
 @media (max-width: 768px) {
   .header {
-    padding: 10% 0 2.5% 0;
+    padding: 10% 2.5% 2.5% 2.5%;
+  }
+  .anashimIL {
+    width: 88px;
+    display: block;
+    object-fit: contain;
+    height: 100%;
   }
 }

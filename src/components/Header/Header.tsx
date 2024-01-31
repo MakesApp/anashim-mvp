@@ -1,5 +1,5 @@
 import anashimInnovationHub from '@assets/icons/anashimInnovationHub.svg';
-import anashimInnovationHubMobile from '@assets/mobile/icons/anashimHub.svg';
+import anashimInnovationHubMobile from '@assets/mobile/icons/header/anashimHub.svg';
 import anashimIL from '@assets/icons/anashimIL.png';
 // import anashimILMobile from '@assets/mobile/icons/anashimIL.svg';
 import styles from './Header.module.css';
@@ -15,8 +15,8 @@ const Header = () => {
       <a href="/">
         <img
           loading="lazy"
-          srcSet={`${anashimInnovationHubMobile} 268w, ${anashimInnovationHub} 373w`}
-          sizes="(max-width: 768px) 268px, 373px"
+          srcSet={`${anashimInnovationHubMobile} 250w, ${anashimInnovationHub} 373w`}
+          sizes="(max-width: 768px) 250px, 373px"
           alt="anashimInnovationHub logo"
         />
       </a>

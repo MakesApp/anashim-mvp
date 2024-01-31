@@ -16,3 +16,9 @@
   margin-top: -6px;
   margin-right: 5px;
 }
+
+@media (max-width: 768px) {
+  .searched {
+    font-size: 18px;
+  }
+}

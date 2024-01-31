@@ -1,6 +1,16 @@
 .footer {
-  padding-bottom:  4% ;
-  mix-blend-mode: darken;
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
+  padding-bottom: 8%;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 2.5% 4rem 2.5%;
+    justify-content: unset;
+  }
+  .footer > img {
+    width: 100%;
+  }
 }
