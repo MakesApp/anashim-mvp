@@ -17,3 +17,9 @@
   font-size: 24px;
   font-weight: 900;
 }
+
+@media (max-width: 768px) {
+  .noResults_text {
+    font-size: 18px;
+  }
+}

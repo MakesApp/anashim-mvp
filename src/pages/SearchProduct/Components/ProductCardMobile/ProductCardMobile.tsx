@@ -19,7 +19,6 @@ const ProductCardMobile: React.FC<ProductType & { lastAdded?: boolean }> = ({
   lastAdded,
 }) => {
   const tags = getTags({ sector, fields, type });
-
   return (
     <Product id={id} lastAdded={lastAdded}>
       <div className={`${styles.row}  ${styles.logoContainer}`}>

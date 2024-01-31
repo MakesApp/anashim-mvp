@@ -11,12 +11,13 @@ import { useNavigate } from 'react-router-dom';
 import QueryDetails from './Components/QueryDetails/QueryDetails';
 import FilterDetails from './Components/FilterDetails/FilterDetails';
 import NoResults from './Components/NoResult/NoResults';
-import ProductsList from '../Home/components/ProductsList/ProductsList';
+import LatestFourProducts from '../Home/components/LatestFourProducts/LatestFourProducts';
 import ArticleSection from '@/components/ArticleSection/ArticleSection';
 // import ProductCardMobile from './Components/ProductCardMobile/ProductCardMobile';
 import useIsMobile from '@/hooks/useIsMobile';
 import ProductCard from '../Home/components/ProductCard/ProductCard';
 import ProductCardMobile from './Components/ProductCardMobile/ProductCardMobile';
+import getLastAddedProducts from '@/utils/getLastAddedProducts';
 
 const SearchProduct: React.FC = () => {
   const article = articles[0];
@@ -128,7 +129,19 @@ const SearchProduct: React.FC = () => {
       ) : (
         <div className={styles.noResults_page}>
           <NoResults />
-          <ProductsList />
+          {!isMobile ? (
+            <LatestFourProducts />
+          ) : (
+            <ul className={styles.ul}>
+              {getLastAddedProducts().map((product: any) => {
+                return (
+                  <li key={product.name + product.id} className={styles.li}>
+                    <ProductCardMobile {...product} />
+                  </li>
+                );
+              })}
+            </ul>
+          )}
           <ArticleSection article={article} />
         </div>
       )}

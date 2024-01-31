@@ -2,7 +2,7 @@ import ArticleSection from '@/components/ArticleSection/ArticleSection';
 import styles from './Home.module.css';
 
 import HeroSection from './components/HeroSection/HeroSection';
-import ProductsList from './components/ProductsList/ProductsList';
+import LatestFourProducts from './components/LatestFourProducts/LatestFourProducts';
 import { articles } from '@/data';
 import Swiper from './components/Swiper/Swiper';
 import useIsMobile from '@/hooks/useIsMobile';
@@ -16,7 +16,7 @@ const Home = () => {
         <HeroSection />
         {!isMobile ? (
           <section className={styles.listContainer}>
-            <ProductsList />
+            <LatestFourProducts />
           </section>
         ) : (
           <Swiper />

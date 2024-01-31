@@ -1,6 +1,5 @@
 .article_news_title {
   font-size: 3.6rem;
-  font-weight: 400;
   font-weight: 600;
   color: var(--blush-rose);
   text-align: center;
@@ -29,12 +28,23 @@
     flex-direction: column;
     column-gap: unset;
     row-gap: 1.6rem;
-    margin-top: 2.4rem;
+    margin-top: 0;
+  }
+  .article_news_title {
+    font-size: 2.4rem;
   }
   .article_news_container {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .article_news {
     height: 154px;
+    row-gap: 3.5rem;
+    margin-top: 3.5rem;
+  }
+  .article_news_container > img {
+    width: 20px;
+    height: 18px;
   }
 }

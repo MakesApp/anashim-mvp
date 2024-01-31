@@ -1,14 +1,13 @@
 import ProductCard from '../ProductCard/ProductCard';
-import styles from './ProductsList.module.css';
 import getLastFourProducts from '@utils/getLastAddedProducts';
 
-const ProductsList = () => {
+const LatestFourProducts = () => {
   const lastFourProducts = getLastFourProducts();
   return (
-    <ul className={styles.list}>
+    <ul>
       {[...lastFourProducts].map((p) => {
         return (
-          <li key={p.id + p.name} className={styles.listItem}>
+          <li key={p.id + p.name}>
             <ProductCard {...p} lastAdded={true} />
           </li>
         );
@@ -17,4 +16,4 @@ const ProductsList = () => {
   );
 };
 
-export default ProductsList;
+export default LatestFourProducts;
