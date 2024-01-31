@@ -67,6 +67,7 @@ Team Me מאפשרת לחברות ליצור בקלות תוכן וידאו מק
     logo: beyondVirtual,
     linkedIn: 'https://www.linkedin.com/company/beyondvirtual/',
     date: '2024-01-08',
+    tempVariable: true,
   },
   {
     id: '3',
@@ -274,6 +275,7 @@ Team Me מאפשרת לחברות ליצור בקלות תוכן וידאו מק
     logo: junoJourney,
     linkedIn: 'https://il.linkedin.com/company/junojourney',
     date: '2024-01-08',
+    tempVariable: true,
   },
   {
     id: '15',
@@ -373,6 +375,7 @@ Team Me מאפשרת לחברות ליצור בקלות תוכן וידאו מק
     logo: campusIL,
     linkedIn: '',
     date: '2024-01-10',
+    tempVariable: true,
   },
   {
     id: '21',
@@ -513,6 +516,7 @@ Skill-IL הינו אתר חדשני שמאפשר באופן חכם, מותאם �
     logo: SFI,
     linkedIn: 'https://www.linkedin.com/company/social-finance-israel',
     date: '2024-01-08',
+    tempVariable: true,
   },
   {
     id: '29',

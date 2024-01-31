@@ -1,7 +1,11 @@
+import { Product } from '@/localTypes/product.types';
 import { prodcuts } from '../data';
 
 export default function () {
-  return [prodcuts[13], prodcuts[1], prodcuts[19], prodcuts[27]];
+  const lastAdded = prodcuts.filter((product: Product) => product.tempVariable);
+  lastAdded.sort((a, b) => Number(a.id) - Number(b.id));
+
+  return lastAdded;
 }
 
 //TODO in the future this should be used for now its hardcode like above
