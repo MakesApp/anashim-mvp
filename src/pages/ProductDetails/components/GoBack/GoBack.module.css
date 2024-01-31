@@ -10,3 +10,9 @@
   font-weight: 600;
   line-height: 16px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    margin-bottom: 16px;
+  }
+}
