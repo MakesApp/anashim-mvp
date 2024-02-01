@@ -61,6 +61,7 @@
     flex-direction: column;
     margin-top: 16px;
     margin-bottom: 12px;
+    gap: 8px;
   }
   .hero::after {
     left: -2.5%;

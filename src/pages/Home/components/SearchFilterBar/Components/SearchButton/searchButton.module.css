@@ -2,3 +2,9 @@
   margin-top: 9px;
   align-self: flex-start;
 }
+
+@media (max-width: 768px) {
+  .button {
+    margin-top: 3px;
+  }
+}
