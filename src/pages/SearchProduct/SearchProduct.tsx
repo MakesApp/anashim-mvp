@@ -18,11 +18,13 @@ import useIsMobile from '@/hooks/useIsMobile';
 import ProductCard from '../Home/components/ProductCard/ProductCard';
 import ProductCardMobile from './Components/ProductCardMobile/ProductCardMobile';
 import getLastAddedProducts from '@/utils/getLastAddedProducts';
-
+import arrowUp from '@assets/icons/arrowUp.svg';
+import arrowDown from '@assets/icons/arrowDown.svg';
 const SearchProduct: React.FC = () => {
   const article = articles[0];
   const [queryForSearchBar, setQueryForSearchBar] = useState<string>('');
   const [filtersForSearchBar, setFiltersForSearchBar] = useState<any>([]);
+  const [showFullSearch, setShowFullSearch] = useState(false);
   const [tags, setTags] = useState<any>([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const isMobile = useIsMobile();
@@ -92,7 +94,30 @@ const SearchProduct: React.FC = () => {
     <div className={styles.main_container}>
       <div className={styles.hero}>
         <div className={styles.searchWrapper}>
-          <SearchFilterBar query={queryForSearchBar} filters={filtersForSearchBar} />
+          <SearchFilterBar
+            query={queryForSearchBar}
+            filters={filtersForSearchBar}
+            showFullSearch={showFullSearch}
+          >
+            {isMobile &&
+              (showFullSearch ? (
+                <button
+                  onClick={() => setShowFullSearch(false)}
+                  className={styles.toggleSearch}
+                >
+                  <p>הסתר חיפוש מלא</p>
+                  <img src={arrowUp} alt="arrow up" />
+                </button>
+              ) : (
+                <button
+                  onClick={() => setShowFullSearch(true)}
+                  className={styles.toggleSearch}
+                >
+                  <p>חיפוש מלא</p>
+                  <img src={arrowDown} alt="arrow down" />
+                </button>
+              ))}
+          </SearchFilterBar>
         </div>
       </div>
       {filteredProducts.length ? (

@@ -8,7 +8,12 @@ import AccordionOption from '@components/AccordionOption/AccordionOption';
 import { SearchFilterBarProps } from './SearchFilterBar.types';
 import { accordionItems } from './constants';
 
-const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
+const SearchFilterBar: FC<SearchFilterBarProps> = ({
+  filters,
+  query,
+  children,
+  showFullSearch = true,
+}) => {
   const [filtersSelected, setFiltersSelected] = useState<string[]>([]);
   const [openItem, setOpenItem] = useState<string | null>(null);
   const [search, setSearch] = useState<string>('');
@@ -94,18 +99,21 @@ const SearchFilterBar: FC<SearchFilterBarProps> = ({ filters, query }) => {
         </div>
       </FilterLayout>
 
-      <FilterLayout title="חיפוש לפי הנחיה">
-        <div className={styles.wrapper}>
-          <input
-            onChange={(e) => setSearch(e.target.value.toLowerCase())}
-            value={search}
-            type="text"
-            className={styles.input}
-            placeholder="חיפוש לפי שם או תיאור"
-          />
-          <SearchButton callback={searchByInput} />
-        </div>
-      </FilterLayout>
+      {showFullSearch && (
+        <FilterLayout title="חיפוש לפי הנחיה">
+          <div className={styles.wrapper}>
+            <input
+              onChange={(e) => setSearch(e.target.value.toLowerCase())}
+              value={search}
+              type="text"
+              className={styles.input}
+              placeholder="חיפוש לפי שם או תיאור"
+            />
+            <SearchButton callback={searchByInput} />
+          </div>
+        </FilterLayout>
+      )}
+      {children}
     </>
   );
 };
