@@ -64,3 +64,10 @@
   letter-spacing: 0.066px;
   font-family: 'pauza';
 }
+
+@media (max-width: 768px) {
+  .name {
+    width: 80%;
+    font-size: 14px;
+  }
+}

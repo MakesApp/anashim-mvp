@@ -1,0 +1,45 @@
+.logoContainer {
+  margin: 0 auto;
+}
+.logoContainer > img {
+  width: 100%;
+  height: 8rem;
+}
+.container {
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  display: flex;
+  flex-direction: column;
+}
+.container > h3 {
+  font-size: 3.6rem;
+  font-style: normal;
+  line-height: 24px;
+  font-weight: 900;
+}
+.shortDescription {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+}
+.tagsContainer {
+  margin: 24px 0;
+  font-size: 1.2rem;
+}
+.quoteContainer {
+  flex: 1;
+  line-height: 20px;
+  display: block;
+  padding: 3rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 0.066px;
+  border-radius: 4px;
+  background-color: var(--pearl-white);
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 16px;
+}
