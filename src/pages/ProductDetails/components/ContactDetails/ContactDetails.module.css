@@ -20,6 +20,7 @@
 
 .linksContainer {
   display: flex;
+  width: 100%;
   flex-direction: column;
   row-gap: 1.5rem;
 }
@@ -67,7 +68,7 @@
 
 @media (max-width: 768px) {
   .name {
-    width: 80%;
     font-size: 14px;
+    width: 90%;
   }
 }
