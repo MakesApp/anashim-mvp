@@ -97,7 +97,7 @@ const SearchProduct: React.FC = () => {
           <SearchFilterBar
             query={queryForSearchBar}
             filters={filtersForSearchBar}
-            showFullSearch={showFullSearch}
+            showFullSearch={isMobile ? showFullSearch : true}
           >
             {isMobile &&
               (showFullSearch ? (
