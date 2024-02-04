@@ -155,7 +155,9 @@ const SearchProduct: React.FC = () => {
         <div className={styles.noResults_page}>
           <NoResults />
           {!isMobile ? (
-            <LatestFourProducts />
+            <div className={styles.listContainer}>
+              <LatestFourProducts />
+            </div>
           ) : (
             <ul className={styles.ul}>
               {getLastAddedProducts().map((product: any) => {
