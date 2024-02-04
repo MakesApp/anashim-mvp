@@ -6,6 +6,7 @@
   flex: 1;
   border-radius: 4px;
   justify-content: space-between;
+  cursor: pointer;
 }
 .container::after {
   border-radius: 4px;
