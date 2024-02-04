@@ -1,4 +1,14 @@
-const filterProducts = (products: any, filters: any, searchQuery: any) => {
+import { Product } from '@/localTypes/product.types';
+import { Type, Field, Sector } from '@utils/enum';
+const matchesEnumValue = (
+  searchQuery: string,
+  enumObject: { [s: string]: string },
+): boolean => {
+  const enumValues = Object.values(enumObject);
+  return enumValues.includes(searchQuery);
+};
+
+const filterProducts = (products: Product[], filters: any, searchQuery: string) => {
   const sortedProducts = products.sort((a: any, b: any) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
@@ -28,7 +38,16 @@ const filterProducts = (products: any, filters: any, searchQuery: any) => {
       const descriptionMatches = product.shortDescription
         .toLowerCase()
         .includes(searchQuery);
-      return descriptionMatches || nameMatches;
+
+      const typeMatches = matchesEnumValue(searchQuery, Type);
+      const fieldMatches = matchesEnumValue(searchQuery, Field);
+      const sectorMatches = matchesEnumValue(searchQuery, Sector);
+
+      if (typeMatches || fieldMatches || sectorMatches) {
+      }
+      return (
+        nameMatches || descriptionMatches || typeMatches || fieldMatches || sectorMatches
+      );
     }
     return true;
   });
