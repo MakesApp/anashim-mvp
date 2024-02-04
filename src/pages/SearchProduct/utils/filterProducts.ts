@@ -44,8 +44,6 @@ const filterProducts = (products: Product[], filters: any, searchQuery: string) 
       const sectorMatches = matchesEnumValue(searchQuery, Sector);
 
       if (typeMatches || fieldMatches || sectorMatches) {
-        console.log({ searchQuery, typeMatches, fieldMatches, sectorMatches });
-        console.log({ product });
       }
       return (
         nameMatches || descriptionMatches || typeMatches || fieldMatches || sectorMatches
