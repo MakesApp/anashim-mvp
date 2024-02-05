@@ -72,4 +72,3 @@ export const tags: Tags = {
     tagIcons: { ...fieldIcons },
   },
 };
-const x = 'hi';
