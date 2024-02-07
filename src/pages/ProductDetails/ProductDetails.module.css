@@ -9,31 +9,24 @@
   flex: 1;
   padding: calc(1.5% + 10rem) 0 8.5% 0;
 }
-.bgImg {
-  top: -10px;
+.container::after {
   height: 0;
   position: absolute;
   width: 100vw;
   right: -12.5%;
+  left: -12.5%;
   height: 10rem;
-}
-/* .container::after {
-  position: absolute;
-  width: 100%;
-  height: 10rem;
-  z-index: -1;
-  top: 0;
+  top: -10px;
   content: '';
-  left: 0;
-  background: lightgray url('@assets/images/productDetailsHero.png') 50% / cover no-repeat;
-} */
+  background: url('@assets/images/bg_productD.png') no-repeat center/cover;
+}
 
 @media (max-width: 768px) {
-  .bgImg {
-    height: 60px;
+  .container::after {
+    background: url('@assets/mobile/bg_product.png') no-repeat cover fixed;
     right: -2.5%;
   }
   .content {
-    padding: 6rem 0 36px 0;
+    padding-bottom: 36px;
   }
 }

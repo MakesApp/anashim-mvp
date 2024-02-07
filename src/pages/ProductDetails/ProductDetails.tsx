@@ -1,5 +1,4 @@
 import styles from './ProductDetails.module.css';
-import bgImg from '@assets/images/bg_productD.png';
 import GoBack from './components/GoBack/GoBack';
 import Card from './components/Card/Card';
 import { useParams } from 'react-router';
@@ -13,7 +12,6 @@ const ProductDetails = () => {
   const isMobile = useIsMobile();
   return (
     <main className={styles.container}>
-      <img className={styles.bgImg} aria-hidden="true" src={bgImg} alt="hero img" />
       {!product ? (
         <></>
       ) : (

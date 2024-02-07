@@ -16,11 +16,10 @@
   position: absolute;
   width: 100vw;
   height: 100%;
-  top: 0;
+  top: -10px;
   left: -12.5%;
   content: '';
-  background: url('@assets/images/bg_home.png') no-repeat center/cover fixed;
-
+  background: url('@assets/images/bg_home.png') no-repeat center/cover;
   z-index: -1;
 }
 
@@ -70,7 +69,10 @@
     display: inline;
   }
   .hero::after {
-    left: -2.5%;
+    top: 0;
+    background-image: url('@assets/mobile/bg_home.png');
+    background-attachment: fixed;
+    right: -2.5%;
   }
   .title {
     margin-bottom: 24px;
