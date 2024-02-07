@@ -40,6 +40,7 @@
 }
 
 .AccordionTrigger {
+  color: var(--charcoal-gray);
   font-size: 24px;
   background-color: transparent;
   font-weight: 600;
