@@ -69,10 +69,9 @@
     display: inline;
   }
   .hero::after {
-    top: 0;
-    background-image: url('@assets/mobile/bg_home.png');
-    background-attachment: fixed;
-    right: -2.5%;
+    top: -10px;
+    background-image: url('@assets/mobile/bg_home.png') center/cover;
+    left: -2.5%;
   }
   .title {
     margin-bottom: 24px;

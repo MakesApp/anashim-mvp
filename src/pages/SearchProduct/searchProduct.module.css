@@ -82,6 +82,8 @@
     gap: 8px;
   }
   .hero::after {
+    background: url('@assets/mobile/bg_searchProduct_opened.png');
+    background-position: center;
     left: -2.5%;
   }
   .ul {
