@@ -21,11 +21,13 @@ const ProductCardMobile: React.FC<ProductType & { lastAdded?: boolean }> = ({
   const tags = getTags({ sector, fields, type });
   return (
     <Product id={id} lastAdded={lastAdded} name={name}>
-      <div className={`${styles.row}  ${styles.logoContainer}`}>
+      <div className={`${styles.row}`}>
         <div className={styles.textContainer}>
           <CompanyName lastAdded={lastAdded} name={name} />
         </div>
-        <Logo logo={logo} />
+        <div className={`${styles.logoContainer}`}>
+          <Logo logo={logo} />
+        </div>
       </div>
       <div className={styles.quoteContainer}>
         <Quote text={shortDescription} />

@@ -59,14 +59,19 @@
   border-radius: 4px;
   align-self: flex-end;
 }
-.logoContainer > img {
+
+.logoContainer {
   height: 4rem;
+}
+.logoContainer > img {
   object-fit: contain;
+  width: 100%;
 }
 
 .row {
   display: flex;
   flex: 1;
+  column-gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }

@@ -243,7 +243,7 @@ Team Me מאפשרת לחברות ליצור בקלות תוכן וידאו מק
     name: 'Elevation',
     type: 'תוכנית',
     sector: ['עסקי'],
-    fields: ['עסקי', 'למידה', 'חינוך'],
+    fields: ['למידה', 'חינוך'],
     phone: '077-204-0996',
     email: 'hello@elevation.ac',
     shortDescription:
