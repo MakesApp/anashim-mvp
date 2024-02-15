@@ -59,19 +59,15 @@
   border-radius: 4px;
   align-self: flex-end;
 }
-
-.logoContainer {
-  height: 4rem;
-}
 .logoContainer > img {
+  height: 4rem;
   object-fit: contain;
-  width: 100%;
+  max-width: 10rem;
 }
 
 .row {
   display: flex;
   flex: 1;
-  column-gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }
