@@ -23,7 +23,7 @@ const JoinHub = () => {
       </p>
       <div className={styles.bottom}>
         <p className={styles.bottom_small_text}>
-          פה יכולים לקבל חשיפה, ליצור חיבורים ולשתף בידע מקצועני
+          פה יכולים לקבל חשיפה, ליצור חיבורים ולשתף בידע מקצועי
         </p>
         <span className={styles.bottom_link}>להצטרפות</span>
       </div>
